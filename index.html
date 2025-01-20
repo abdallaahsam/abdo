@@ -3,47 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عبدالله أحمد سمير - السيرة الذاتية</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>أحمد محمود - السيرة الذاتية</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        nav {
+            background: #3498db;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #f1c40f;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #3498db;
+            margin-bottom: 20px;
+        }
+        .profile .info h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #2c3e50;
+        }
+        .profile .info p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 1.1em;
+        }
+        .profile .info a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .profile .info a:hover {
+            color: #2980b9;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        section h2 {
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        .content {
+            margin-left: 20px;
+        }
+        .content h3 {
+            margin: 15px 0 10px;
+            color: #2c3e50;
+            font-size: 1.4em;
+        }
+        .content p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 1.1em;
+        }
+        .content ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .content ul li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #555;
+        }
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skills ul li {
+            background: #ecf0f1;
+            margin: 5px 0;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 1em;
+            color: #333;
+            transition: background 0.3s ease;
+        }
+        .skills ul li:hover {
+            background: #3498db;
+            color: #fff;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+        footer h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        footer p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 1.1em;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            color: #3498db;
+            margin: 0 15px;
+            font-size: 1.8em;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #f1c40f;
+        }
+    </style>
 </head>
 <body>
     <nav>
         <ul>
             <li><a href="#about">من أنا</a></li>
+            <li><a href="#summary">الملخص الشخصي</a></li>
             <li><a href="#experience">الخبرات العملية</a></li>
             <li><a href="#skills">المهارات</a></li>
             <li><a href="#education">التعليم</a></li>
+            <li><a href="#volunteer">العمل التطوعي</a></li>
+            <li><a href="#languages">اللغات</a></li>
             <li><a href="#contact">اتصل بي</a></li>
         </ul>
     </nav>
     <div class="container">
         <header id="about">
             <div class="profile">
-                <img src="profile.jpg" alt="صورة عبدالله أحمد سمير">
+                <img src="profile.jpg" alt="صورة أحمد محمود">
                 <div class="info">
-                    <h1>عبدالله أحمد سمير</h1>
-                    <p>مصمم جرافيك</p>
-                    <p><a href="mailto:abdallaahsam66@gmail.com"><i class="fas fa-envelope"></i> abdallaahsam66@gmail.com</a></p>
-                    <p><i class="fas fa-phone"></i> +201112302757</p>
+                    <h1>أحمد محمود</h1>
+                    <p>مصمم جرافيك فريلانسر</p>
+                    <p><a href="mailto:ahmed.mahmoud@example.com"><i class="fas fa-envelope"></i> ahmed.mahmoud@example.com</a></p>
+                    <p><i class="fas fa-phone"></i> +20 123 456 7890</p>
                     <p><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</p>
                 </div>
             </div>
         </header>
+        <section id="summary">
+            <h2>الملخص الشخصي</h2>
+            <div class="content">
+                <p>مصمم جرافيك محترف مع أكثر من 6 سنوات من الخبرة في تصميم الشعارات، الهويات البصرية، والمواد التسويقية. أتمتع بمهارات متقدمة في استخدام أدوات التصميم مثل Adobe Photoshop وIllustrator، مع قدرة على إدارة مشاريع متعددة وتلبية احتياجات العملاء بجودة عالية. أسعى إلى تقديم حلول تصميمية إبداعية تعزز العلامات التجارية للعملاء.</p>
+            </div>
+        </section>
         <section id="experience">
             <h2>الخبرات العملية</h2>
             <div class="content">
-                <h3>متدرب تصميم جرافيك</h3>
-                <p>أكاديمية فيرست ستيب | القاهرة<br>مارس 2024 - يونيو 2024</p>
+                <h3>فريلانسر جرافيك ديزاينر</h3>
+                <p>عمل حر | يناير 2018 – الحاضر</p>
                 <ul>
-                    <li>أتممت دورة شاملة في تصميم الجرافيك تغطي أساسيات التصميم، نظرية الألوان، والطباعة.</li>
-                    <li>أنجزت مشروع تخرج لإنشاء هوية تجارية كاملة لشركة افتراضية.</li>
-                <h3>متدرب تصميم جرافيك</h3>
-                <p>أكاديمية فيرست ستيب | القاهرة<br>مارس 2024 - يونيو 2024</p>
+                    <li>تصميم شعارات وهويات بصرية لعملاء من مختلف القطاعات، مع تحقيق رضا بنسبة 95%.</li>
+                    <li>إنشاء مواد تسويقية مثل البروشورات، البنرات، والمنشورات لوسائل التواصل الاجتماعي.</li>
+                    <li>العمل مع أكثر من 50 عميلًا من مختلف أنحاء العالم، بما في ذلك شركات ناشئة وعلامات تجارية كبيرة.</li>
+                    <li>إدارة الوقت بكفاءة لتسليم المشاريع في المواعيد المحددة مع الحفاظ على جودة عالية.</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h3>مصمم جرافيك</h3>
+                <p>شركة إعلانات محلية | يونيو 2015 – ديسمبر 2017</p>
                 <ul>
-                    <li>أتممت دورة شاملة في تصميم الجرافيك تغطي أساسيات التصميم، نظرية الألوان، والطباعة.</li>
-                    <li>أنجزت مشروع تخرج لإنشاء هوية تجارية كاملة لشركة افتراضية.</li>
+                    <li>تصميم وإنتاج مواد إعلانية مطبوعة ورقمية للعملاء، بما في ذلك الكتيبات، اللافتات، والإعلانات التفاعلية.</li>
+                    <li>تطوير مفاهيم إبداعية لعروض تقديمية للعملاء، مما ساهم في زيادة المبيعات بنسبة 20%.</li>
+                    <li>التعاون مع فريق التسويق لإنشاء محتوى مرئي لجذب الجمهور المستهدف.</li>
                 </ul>
             </div>
         </section>
@@ -51,22 +219,61 @@
             <h2>المهارات الأساسية</h2>
             <ul class="skills">
                 <li>Adobe Creative Suite (Photoshop, Illustrator, InDesign)</li>
-                <li>Sketch، Figma، تصميم الهوية، تصميم الجرافيك، تصميم المطبوعات</li>
-                <li>إدارة الوقت، العمل الجماعي، الاهتمام بالتفاصيل، التواصل الفعّال</li>
+                <li>تصميم الهويات البصرية</li>
+                <li>تصميم المواد التسويقية</li>
+                <li>إدارة الوقت</li>
+                <li>العمل الجماعي</li>
+                <li>الاهتمام بالتفاصيل</li>
             </ul>
         </section>
         <section id="education">
             <h2>التعليم</h2>
-            <p><strong>جامعة عين شمس</strong><br>بكالوريوس تجارة (طالب)<br>يناير 2024 - يناير 2048</p>
+            <div class="content">
+                <h3>بكالوريوس في الفنون الجميلة</h3>
+                <p>جامعة حلوان | سبتمبر 2011 – مايو 2015</p>
+                <ul>
+                    <li>التخصص: التصميم الجرافيكي</li>
+                    <li>المعدل التراكمي: 3.7/4.0</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h3>دورة متقدمة في التصميم الجرافيكي</h3>
+                <p>منصة Udemy | 2020</p>
+                <ul>
+                    <li>تعلم تقنيات متقدمة في Adobe Photoshop وIllustrator.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="volunteer">
+            <h2>العمل التطوعي</h2>
+            <div class="content">
+                <h3>مصمم جرافيك تطوعي</h3>
+                <p>جمعية خيرية محلية | 2018 – 2019</p>
+                <ul>
+                    <li>تصميم مواد توعوية وإعلانية للجمعية، مما ساهم في زيادة المشاركة المجتمعية بنسبة 30%.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="languages">
+            <h2>اللغات</h2>
+            <div class="content">
+                <ul>
+                    <li>العربية: اللغة الأم</li>
+                    <li>الإنجليزية: متقدم (كتابة ومحادثة)</li>
+                </ul>
+            </div>
         </section>
         <footer id="contact">
             <h2>اتصل بي</h2>
-            <p><a href="mailto:abdallaahsam66@gmail.com"><i class="fas fa-envelope"></i> abdallaahsam66@gmail.com</a></p>
-            <p><i class="fas fa-phone"></i> +201112302757</p>
-            <p><i class="fas fa-map-marker-alt"></i> القاهرة، دار السلام 11732، مصر</p>
+            <p><a href="mailto:ahmed.mahmoud@example.com"><i class="fas fa-envelope"></i> ahmed.mahmoud@example.com</a></p>
+            <p><i class="fas fa-phone"></i> +20 123 456 7890</p>
+            <p><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</p>
             <div class="social-icons">
                 <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.behance.net" target="_blank"><i class="fab fa-behance"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
             </div>
         </footer>
     </div>
