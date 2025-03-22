@@ -1,10 +1,75 @@
+/* الخطوط والألوان العامة */
+html {
+    scroll-behavior: smooth; /* التمرير السلس */
+}
+
+body {
+    font-family: 'Cairo', Arial, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+/* الوضع المظلم */
+body.dark-mode {
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+
+body.dark-mode .container {
+    background: #34495e;
+}
+
+body.dark-mode nav {
+    background: #2c3e50;
+}
+
+/* زر الوضع المظلم */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    z-index: 2000; /* قيمة أعلى من z-index لشريط التنقل */
+    y-index: 4000; /* قيمة أعلى من Y-index لشريط التنقل */
+
+}
+
+.dark-mode-toggle:hover {
+    background: #2980b9;
+}
+
+body.dark-mode {
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+
+body.dark-mode .container {
+    background: #34495e;
+}
+
+body.dark-mode nav {
+    background: #2c3e50;
+}
+
 /* الصورة والمعلومات الشخصية */
 .profile {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: right; /* لجعل النص على الجانب الأيمن */
+    text-align: right;
     margin-bottom: 30px;
+    background: linear-gradient(135deg, #f0f4f8, #ecf0f1);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .profile img {
@@ -12,7 +77,7 @@
     height: 150px;
     border-radius: 50%;
     border: 4px solid #3498db;
-    margin-right: 30px; /* مسافة بين الصورة والنص */
+    margin-right: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -22,7 +87,7 @@
 }
 
 .profile .info {
-    max-width: 400px; /* تحديد عرض النص */
+    max-width: 400px;
 }
 
 .profile .info h1 {
@@ -45,18 +110,9 @@
 
 .profile .info a:hover {
     color: #2980b9;
-} 
-
-/* الخطوط والألوان العامة */
-body {
-    font-family: 'Cairo', sans-serif;
-    line-height: 1.8;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f4f8;
-    color: #333;
 }
 
+/* شريط التنقل */
 /* شريط التنقل */
 nav {
     background: #3498db;
@@ -69,7 +125,14 @@ nav {
     z-index: 1000;
 }
 
-nav ul {
+.nav-toggle {
+    display: none; /* مخفي على الشاشات الكبيرة */
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.nav-menu {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -77,21 +140,72 @@ nav ul {
     justify-content: center;
 }
 
-nav ul li {
+.nav-menu li {
     margin: 0 20px;
 }
 
-nav ul li a {
+.nav-menu li a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1em;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
 }
 
-nav ul li a:hover {
+.nav-menu li a:hover {
     color: #f1c40f;
     transform: translateY(-3px);
+    background: rgba(241, 196, 15, 0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* الاستجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block; /* إظهار زر الهمبرغر */
+    }
+
+    .nav-menu {
+        display: none; /* إخفاء القائمة بشكل افتراضي */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #3498db;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        display: flex; /* إظهار القائمة عند النقر */
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .nav-menu li a {
+        font-size: 1em;
+        padding: 10px;
+        display: block;
+    }
+
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .skills ul {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* المحتوى الرئيسي */
@@ -114,43 +228,6 @@ nav ul li a:hover {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* الصورة الشخصية */
-.profile img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid #3498db;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.profile img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(52, 152, 219, 0.5);
-}
-
-.profile .info h1 {
-    margin: 0;
-    font-size: 2.5em;
-    color: #2c3e50;
-}
-
-.profile .info p {
-    margin: 10px 0;
-    color: #555;
-    font-size: 1.1em;
-}
-
-.profile .info a {
-    color: #3498db;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.profile .info a:hover {
-    color: #2980b9;
 }
 
 /* الأقسام */
@@ -239,11 +316,42 @@ section h2:hover::after {
     transform: translateY(-5px);
 }
 
+/* نموذج الاتصال */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Cairo', Arial, sans-serif;
+}
+
+button {
+    background: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
 /* التذييل */
 footer {
     text-align: center;
     margin-top: 40px;
-    padding-top: 20px;
+    padding: 30px 0;
+    background: #ecf0f1;
     border-top: 1px solid #ddd;
 }
 
@@ -275,6 +383,29 @@ footer p {
     transform: translateY(-5px);
 }
 
+/* زر العودة للأعلى */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    transition: background 0.3s ease;
+}
+
+.back-to-top.show {
+    display: block;
+}
+
+.back-to-top:hover {
+    background: #2980b9;
+}
+
 /* تأثيرات إضافية */
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
@@ -290,4 +421,24 @@ footer p {
 
 .bounce {
     animation: bounce 1s infinite;
+}
+
+/* الاستجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .skills ul {
+        flex-direction: column;
+        align-items: center;
+    }
 }
