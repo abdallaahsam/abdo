@@ -1,376 +1,986 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="سيرة ذاتية لعبدالله أحمد سمير، مصمم جرافيك فريلانسر متخصص في تصميم الهويات البصرية والمواد التسويقية من القاهرة، مصر.">
-    <meta name="keywords" content="مصمم جرافيك, فريلانسر, تصميم شعارات, تصميم هوية بصرية, تصميم مواد تسويقية, القاهرة, مصر">
-    <title>عبدالله أحمد سمير - مصمم جرافيك محترف</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="manifest" href="site.webmanifest">
-    <meta name="theme-color" content="#2563eb">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Abdallah Ahmed Samir (بودة) - Graphic Designer &amp; Front-End Developer from Cairo, Egypt. Specializing in social media designs, branding, UI visuals, and front-end development. Available for freelance work and collaborations.">
+  <meta name="keywords"
+    content="Graphic Design, Front-End Development, Cairo Egypt, Freelance Designer, UI Design, Social Media Design">
+  <meta name="geo.position" content="30.0444;31.2357">
+  <meta name="geo.region" content="EG-C">
+  <meta name="geo.placename" content="Cairo">
+
+<!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#2563eb">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Abdallah Ahmed Samir - Graphic Designer &amp; Front-End Developer">
+  <meta property="og:description"
+    content="Professional graphic designer and front-end developer from Cairo, Egypt. Available for freelance projects and collaborations.">
+
+
+  <title>Abdallah Ahmed Samir - Graphic Designer &amp; Front-End Developer | Cairo Egypt</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./Abdallah_files/css2.css" rel="stylesheet">
+
+  <!-- Remix Icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
+  <script type="module" crossorigin="" src="./Abdallah_files/index-BvGaueNh.js"></script>
+  <link rel="stylesheet" href="./Abdallah_files/index-fAi-AKKm.css">
 </head>
+
 <body>
-    <!-- خلفية الجزيئات -->
-    <div id="particles-js"></div>
-
-    <!-- زر الوضع المظلم -->
-    <button onclick="toggleDarkMode()" class="dark-mode-toggle" aria-label="تبديل الوضع المظلم"><i class="fas fa-moon"></i></button>
-
-    <!-- شريط التنقل -->
-    <nav>
-        <div class="nav-toggle" aria-label="قائمة التنقل"><i class="fas fa-bars"></i></div>
-        <ul class="nav-menu">
-            <li><a href="#about" aria-label="معلومات عني"><i class="fas fa-user"></i> من أنا</a></li>
-            <li><a href="#summary" aria-label="الملخص الشخصي">الملخص الشخصي</a></li>
-            <li><a href="#experience" aria-label="الخبرات العملية">الخبرات العملية</a></li>
-            <li><a href="#skills" aria-label="المهارات">المهارات</a></li>
-            <li><a href="#education" aria-label="التعليم">التعليم</a></li>
-            <li><a href="#volunteer" aria-label="العمل التطوعي">العمل التطوعي</a></li>
-            <li><a href="#languages" aria-label="اللغات">اللغات</a></li>
-            <li><a href="#portfolio" aria-label="معرض الأعمال">أعمالي</a></li>
-            <li><a href="#stats" aria-label="الإحصائيات">إحصائيات</a></li>
-            <li><a href="#faq" aria-label="الأسئلة الشائعة">الأسئلة الشائعة</a></li>
-            <li><a href="#contact" aria-label="اتصل بي">اتصل بي</a></li>
-        </ul>
-    </nav>
-
-    <div class="container">
-        <!-- القسم الشخصي -->
-        <header id="about">
-            <div class="profile">
-                <picture>
-                    <source srcset="profile.webp" type="image/webp">
-                    <source srcset="profile-small.jpg" media="(max-width: 768px)">
-                    <img src="profile.jpg" alt="صورة عبدالله أحمد سمير" loading="lazy" width="200" height="200">
-                </picture>
-                <div class="info">
-                    <h1>عبدالله أحمد سمير</h1>
-                    <p class="title">مصمم جرافيك محترف</p>
-                    <p><a href="mailto:abdallaahsam66@gmail.com" aria-label="البريد الإلكتروني"><i class="fas fa-envelope"></i> abdallaahsam66@gmail.com</a></p>
-                    <p><a href="tel:+201112302757" aria-label="رقم الهاتف"><i class="fas fa-phone"></i> +20 111 230 2757</a></p>
-                    <p><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</p>
-                    <div class="cta-buttons">
-                        <a href="cv.pdf" download class="download-btn" aria-label="تحميل السيرة الذاتية"><i class="fas fa-download"></i> تحميل السيرة الذاتية</a>
-                        <a href="#contact" class="contact-btn" aria-label="تواصل معي"><i class="fas fa-paper-plane"></i> تواصل معي</a>
-                    </div>
+  <div id="root">
+    <div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      <section class="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-20">
+        <div class="absolute inset-0 overflow-hidden">
+          <div class="absolute w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl top-20 -left-20 animate-pulse"></div>
+          <div
+            class="absolute w-96 h-96 bg-purple-500/10 rounded-full blur-3xl bottom-20 -right-20 animate-pulse delay-1000">
+          </div>
+        </div>
+        <div class="relative z-10 max-w-6xl mx-auto text-center transition-all duration-1000 opacity-100 translate-y-0">
+          <div class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-12 md:p-16 shadow-2xl">
+            <div class="mb-6">
+              <h2 class="text-cyan-400 text-lg md:text-xl font-medium mb-2 tracking-wide">Welcome to my portfolio</h2>
+              <h1 class="text-5xl md:text-7xl font-bold text-white mb-4">Abdallah Ahmed Samir</h1>
+            </div>
+            <div class="mb-8">
+              <h3
+                class="text-2xl md:text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-green-400 mb-4">
+                Graphic Designer &amp; Front-End Learner</h3>
+              <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">Blending creativity with
+                professionalism to deliver stunning visual designs and modern web experiences. Based in Cairo, Egypt.
+              </p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center"><a
+                href="#portfolio"
+                onclick="event.preventDefault();document.getElementById('portfolio').scrollIntoView({behavior:'smooth'});"
+                class="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/50 whitespace-nowrap w-full sm:w-auto flex items-center justify-center cursor-pointer"><span
+                  class="relative z-10 flex items-center gap-2">View My Work<i
+                    class="ri-arrow-right-line text-xl"></i></span></a><button
+                class="group px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border-2 border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-cyan-400 hover:scale-105 whitespace-nowrap w-full sm:w-auto flex items-center justify-center cursor-pointer"><span
+                  class="flex items-center gap-2">Hire Me<i class="ri-mail-line text-xl"></i></span></button></div>
+            <div class="mt-12 flex justify-center gap-6"><a href="https://linkedin.com/in/abdallaahsam" target="_blank"
+                rel="noopener noreferrer"
+                class="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-cyan-500 hover:border-cyan-500 transition-all duration-300 hover:scale-110 cursor-pointer"><i
+                  class="ri-linkedin-fill text-xl"></i></a><a href="#contact"
+                class="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-purple-500 hover:border-purple-500 transition-all duration-300 hover:scale-110 cursor-pointer"><i
+                  class="ri-mail-fill text-xl"></i></a></div>
+          </div>
+          <div class="mt-16 animate-bounce"><i class="ri-arrow-down-line text-3xl text-cyan-400"></i></div>
+        </div>
+      </section>
+      <section id="about" class="py-24 px-4 relative">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">About Me</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-green-500 mx-auto rounded-full"></div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8 mb-16">
+            <div
+              class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
+              <div class="flex items-center gap-4 mb-6">
+                <div
+                  class="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-cyan-500 to-purple-500 rounded-xl">
+                  <i class="ri-user-line text-3xl text-white"></i>
                 </div>
+                <h3 class="text-2xl font-bold text-white">Who I Am</h3>
+              </div>
+              <p class="text-gray-300 leading-relaxed mb-4">I'm Abdallah Ahmed Samir, known as <span
+                  class="text-cyan-400 font-semibold" style="font-family: Cairo, sans-serif;">بودة</span>, a passionate
+                creative professional from Cairo, Egypt. Currently pursuing my degree at Faculty of Commerce – Ain Shams
+                University while specializing in Graphic Design, Front-End Development, and Accounting.</p>
+              <p class="text-gray-300 leading-relaxed">I believe in the power of visual storytelling and clean code to
+                create meaningful digital experiences. My journey combines academic excellence with hands-on creative
+                work and community engagement.</p>
             </div>
-        </header>
-
-        <!-- الملخص الشخصي -->
-        <section id="summary">
-            <h2>الملخص الشخصي</h2>
-            <div class="content">
-                <p>مصمم جرافيك متوسط مع خبرة متميزة في تصميم الهويات البصرية والمواد التسويقية. متخصص في تصميم الشعارات ومنشورات التواصل الاجتماعي مع التركيز على تحقيق أهداف العملاء التسويقية. أتقن استخدام برامج Adobe Creative Suite وأمتلك مهارات متقدمة في التصميم الإبداعي والتفكير الاستراتيجي. ملتزم بتقديم تصاميم عالية الجودة تلبي احتياجات العملاء وتتجاوز توقعاتهم. <strong>دعونا نحول رؤيتكم إلى واقع ملموس!</strong></p>
+            <div
+              class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
+              <div class="flex items-center gap-4 mb-6">
+                <div
+                  class="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-purple-500 to-green-500 rounded-xl">
+                  <i class="ri-map-pin-line text-3xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white">Location &amp; Info</h3>
+              </div>
+              <div class="space-y-4">
+                <div class="flex items-start gap-3"><i class="ri-map-pin-2-fill text-cyan-400 text-xl mt-1"></i>
+                  <div>
+                    <p class="text-white font-semibold">Based in</p>
+                    <p class="text-gray-300">Cairo, Egypt</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3"><i class="ri-graduation-cap-fill text-purple-400 text-xl mt-1"></i>
+                  <div>
+                    <p class="text-white font-semibold">Education</p>
+                    <p class="text-gray-300">Commerce Student at Ain Shams University</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3"><i class="ri-briefcase-fill text-green-400 text-xl mt-1"></i>
+                  <div>
+                    <p class="text-white font-semibold">Specialization</p>
+                    <p class="text-gray-300">Graphic Design, Front-End Dev, Accounting</p>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
-
-        <!-- الخبرات العملية -->
-        <section id="experience">
-            <h2>الخبرات العملية</h2>
-            <div class="content">
-                <h3>عضو - قسم السوشيال ميديا</h3>
-                <p class="date"><i class="far fa-calendar-alt"></i> يوليو 2024 - يناير 2025</p>
-                <p class="company"><i class="far fa-building"></i> (YLY) – وزارة الشباب والرياضة</p>
-                <ul>
-                    <li><strong>تصميم جرافيك:</strong> إنشاء تصاميم إبداعية للمنشورات والإعلانات على منصات التواصل الاجتماعي باستخدام Adobe Creative Suite.</li>
-                    <li><strong>التعليق الصوتي:</strong> إنتاج تعليقات صوتية احترافية للمحتوى المرئي باستخدام تقنيات الصوت المتقدمة.</li>
-                    <li><strong>التصوير الفوتوغرافي:</strong> توثيق الفعاليات باحترافية وإنتاج محتوى بصري عالي الجودة.</li>
-                    <li><strong>كتابة المحتوى:</strong> تطوير محتوى تفاعلي يعزز مشاركة الجمهور.</li>
-                    <li><strong>تحسين الأداء:</strong> زيادة معدل التفاعل بنسبة 20% من خلال استراتيجيات محتوى مبتكرة.</li>
+          </div>
+          <div class="mb-16">
+            <h3 class="text-3xl font-bold text-white text-center mb-8">Skills &amp; Expertise</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div
+                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20 group cursor-pointer">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-cyan-500/20 rounded-lg mb-4 group-hover:bg-cyan-500/30 transition-all duration-300">
+                  <i class="ri-image-edit-line text-2xl text-cyan-400"></i>
+                </div>
+                <p class="text-white font-semibold">Photoshop</p>
+              </div>
+              <div
+                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20 group cursor-pointer">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-purple-500/20 rounded-lg mb-4 group-hover:bg-purple-500/30 transition-all duration-300">
+                  <i class="ri-code-s-slash-line text-2xl text-purple-400"></i>
+                </div>
+                <p class="text-white font-semibold">HTML &amp; CSS</p>
+              </div>
+              <div
+                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20 group cursor-pointer">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-green-500/20 rounded-lg mb-4 group-hover:bg-green-500/30 transition-all duration-300">
+                  <i class="ri-file-word-line text-2xl text-green-400"></i>
+                </div>
+                <p class="text-white font-semibold">Microsoft Office</p>
+              </div>
+              <div
+                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20 group cursor-pointer">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-cyan-500/20 rounded-lg mb-4 group-hover:bg-cyan-500/30 transition-all duration-300">
+                  <i class="ri-team-line text-2xl text-cyan-400"></i>
+                </div>
+                <p class="text-white font-semibold">Teamwork</p>
+              </div>
+              <div
+                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20 group cursor-pointer">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-purple-500/20 rounded-lg mb-4 group-hover:bg-purple-500/30 transition-all duration-300">
+                  <i class="ri-chat-3-line text-2xl text-purple-400"></i>
+                </div>
+                <p class="text-white font-semibold">Communication</p>
+              </div>
+              <div
+                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20 group cursor-pointer">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-green-500/20 rounded-lg mb-4 group-hover:bg-green-500/30 transition-all duration-300">
+                  <i class="ri-lightbulb-line text-2xl text-green-400"></i>
+                </div>
+                <p class="text-white font-semibold">Problem-Solving</p>
+              </div>
+              <div
+                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20 group cursor-pointer">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-cyan-500/20 rounded-lg mb-4 group-hover:bg-cyan-500/30 transition-all duration-300">
+                  <i class="ri-search-line text-2xl text-cyan-400"></i>
+                </div>
+                <p class="text-white font-semibold">Research</p>
+              </div>
+              <div
+                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20 group cursor-pointer">
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-purple-500/20 rounded-lg mb-4 group-hover:bg-purple-500/30 transition-all duration-300">
+                  <i class="ri-refresh-line text-2xl text-purple-400"></i>
+                </div>
+                <p class="text-white font-semibold">Adaptability</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-3xl font-bold text-white text-center mb-8">Experience &amp; Background</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div
+                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+                <h4 class="text-xl font-bold text-cyan-400 mb-4 flex items-center gap-2"><i
+                    class="ri-checkbox-circle-fill"></i>Education</h4>
+                <ul class="space-y-2">
+                  <li class="text-gray-300 flex items-start gap-2"><i
+                      class="ri-arrow-right-s-line text-purple-400 mt-1"></i><span>Faculty of Commerce – Ain Shams
+                      University (Arabic section)</span></li>
+                  <li class="text-gray-300 flex items-start gap-2"><i
+                      class="ri-arrow-right-s-line text-purple-400 mt-1"></i><span>2023–2028</span></li>
                 </ul>
-            </div>
-            <div class="content">
-                <h3>HR - فريق الميديا</h3>
-                <p class="date"><i class="far fa-calendar-alt"></i> يونيو 2024 - الآن</p>
-                <p class="company"><i class="far fa-building"></i> مؤسسة صناع الحياة - القاهرة</p>
-                <ul>
-                    <li><strong>التصميم الإبداعي:</strong> تصميم منشورات جذابة وبانرات تفاعلية.</li>
-                    <li><strong>إدارة الفعاليات:</strong> تخطيط وتنفيذ فعاليات تطوعية ناجحة.</li>
-                    <li><strong>تطوير المتطوعين:</strong> إدارة وتوجيه المتطوعين لتحسين مهاراتهم وأدائهم.</li>
+              </div>
+              <div
+                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+                <h4 class="text-xl font-bold text-cyan-400 mb-4 flex items-center gap-2"><i
+                    class="ri-checkbox-circle-fill"></i>Training &amp; Courses</h4>
+                <ul class="space-y-2">
+                  <li class="text-gray-300 flex items-start gap-2"><i
+                      class="ri-arrow-right-s-line text-purple-400 mt-1"></i><span>Graphic Design Course at First Step
+                      (Jan–May 2023)</span></li>
                 </ul>
-            </div>
-        </section>
-
-        <!-- المهارات -->
-        <section id="skills">
-            <h2>المهارات الأساسية</h2>
-            <h3>المهارات التقنية</h3>
-            <div class="skill-bars">
-                <div class="skill-bar">
-                    <p><i class="fab fa-adobe"></i> Adobe Photoshop</p>
-                    <div class="bar"><div class="progress" style="width: 90%;" data-value="90%"></div></div>
-                </div>
-                <div class="skill-bar">
-                    <p><i class="fab fa-adobe"></i> Adobe Illustrator</p>
-                    <div class="bar"><div class="progress" style="width: 85%;" data-value="85%"></div></div>
-                </div>
-                <div class="skill-bar">
-                    <p><i class="fab fa-adobe"></i> Adobe XD</p>
-                    <div class="bar"><div class="progress" style="width: 80%;" data-value="80%"></div></div>
-                </div>
-                <div class="skill-bar">
-                    <p><i class="fab fa-python"></i> Python</p>
-                    <div class="bar"><div class="progress" style="width: 70%;" data-value="70%"></div></div>
-                </div>
-            </div>
-            
-            <h3>المهارات الشخصية</h3>
-            <div class="skills-grid">
-                <div class="skill-item"><i class="fas fa-comments"></i> مهارات التواصل</div>
-                <div class="skill-item"><i class="fas fa-puzzle-piece"></i> حل المشكلات</div>
-                <div class="skill-item"><i class="fas fa-lightbulb"></i> التفكير الإبداعي</div>
-                <div class="skill-item"><i class="fas fa-chalkboard-teacher"></i> التعليم والتدريب</div>
-                <div class="skill-item"><i class="fas fa-pen"></i> الكتابة الإبداعية</div>
-                <div class="skill-item"><i class="fas fa-users"></i> إدارة الموارد البشرية</div>
-                <div class="skill-item"><i class="fas fa-robot"></i> الذكاء الاصطناعي</div>
-                <div class="skill-item"><i class="fas fa-chess"></i> التخطيط الاستراتيجي</div>
-                <div class="skill-item"><i class="fas fa-gavel"></i> اتخاذ القرارات</div>
-                <div class="skill-item"><i class="fas fa-search"></i> البحث العلمي</div>
-                <div class="skill-item"><i class="fas fa-user-check"></i> التنمية الذاتية</div>
-                <div class="skill-item"><i class="fas fa-globe"></i> الفهم الثقافي</div>
-                <div class="skill-item"><i class="fas fa-tasks"></i> تنظيم المهام</div>
-                <div class="skill-item"><i class="fas fa-user-friends"></i> العمل الجماعي</div>
-                <div class="skill-item"><i class="fas fa-clock"></i> إدارة الوقت</div>
-                <div class="skill-item"><i class="fas fa-users-cog"></i> العمل ضمن فريق</div>
-                <div class="skill-item"><i class="fas fa-folder"></i> إدارة المشاريع</div>
-                <div class="skill-item"><i class="fas fa-laptop-code"></i> التكيف التقني</div>
-                <div class="skill-item"><i class="fas fa-eye"></i> الدقة في التفاصيل</div>
-            </div>
-        </section>
-
-        <!-- التعليم -->
-        <section id="education">
-            <h2>التعليم</h2>
-            <div class="content education-card">
-                <h3>بكالوريوس تجارة</h3>
-                <p class="date"><i class="far fa-calendar-alt"></i> ديسمبر 2023 - يناير 2028</p>
-                <p class="institution"><i class="fas fa-university"></i> جامعة عين شمس</p>
-                <ul>
-                    <li><strong>التخصص:</strong> محاسبة</li>
-                    <li><strong>المواد الرئيسية:</strong> المحاسبة المالية، المحاسبة الإدارية، تحليل البيانات</li>
-                    <li><strong>مشاريع مميزة:</strong> تطبيق مهارات التحليل المالي في دراسات حالة واقعية</li>
+              </div>
+              <div
+                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+                <h4 class="text-xl font-bold text-cyan-400 mb-4 flex items-center gap-2"><i
+                    class="ri-checkbox-circle-fill"></i>Organizations</h4>
+                <ul class="space-y-2">
+                  <li class="text-gray-300 flex items-start gap-2"><i
+                      class="ri-arrow-right-s-line text-purple-400 mt-1"></i><span>AIBE – Marketing Team</span></li>
+                  <li class="text-gray-300 flex items-start gap-2"><i
+                      class="ri-arrow-right-s-line text-purple-400 mt-1"></i><span>Project X – Entrepreneurship</span>
+                  </li>
+                  <li class="text-gray-300 flex items-start gap-2"><i
+                      class="ri-arrow-right-s-line text-purple-400 mt-1"></i><span>YLY Cairo – Social Media
+                      Committee</span></li>
                 </ul>
-            </div>
-        </section>
-
-        <!-- العمل التطوعي -->
-        <section id="volunteer">
-            <h2>العمل التطوعي</h2>
-            <div class="content volunteer-card">
-                <h3>متطوع في ملفات متعددة</h3>
-                <p class="date"><i class="far fa-calendar-alt"></i> مارس 2023 - الآن</p>
-                <p class="organization"><i class="fas fa-hands-helping"></i> مؤسسة صناع الحياة الخيرية</p>
-                <ul>
-                    <li><strong>تصميم المواد التوعوية:</strong> زيادة المشاركة المجتمعية بنسبة 30% من خلال تصاميم مبتكرة</li>
-                    <li><strong>إدارة الحالة:</strong> إنجاز أكثر من 350 بحث ميداني وتحليل احتياجات المستفيدين</li>
-                    <li><strong>تنظيم الفعاليات:</strong> المساهمة في تخطيط وتنفيذ فعاليات مجتمعية ناجحة</li>
+              </div>
+              <div
+                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+                <h4 class="text-xl font-bold text-cyan-400 mb-4 flex items-center gap-2"><i
+                    class="ri-checkbox-circle-fill"></i>Volunteer Work</h4>
+                <ul class="space-y-2">
+                  <li class="text-gray-300 flex items-start gap-2"><i
+                      class="ri-arrow-right-s-line text-purple-400 mt-1"></i><span>Life Makers Foundation (Social Media
+                      Committee)</span></li>
+                  <li class="text-gray-300 flex items-start gap-2"><i
+                      class="ri-arrow-right-s-line text-purple-400 mt-1"></i><span>Resala Foundation – Maadi branch (6
+                      months training)</span></li>
+                  <li class="text-gray-300 flex items-start gap-2"><i
+                      class="ri-arrow-right-s-line text-purple-400 mt-1"></i><span>Hayah Karima initiative – Dar Al
+                      Salam</span></li>
                 </ul>
+              </div>
             </div>
-        </section>
-
-        <!-- اللغات -->
-        <section id="languages">
-            <h2>اللغات</h2>
-            <div class="content languages-grid">
-                <div class="language-card">
-                    <i class="fas fa-language"></i>
-                    <h3>العربية</h3>
-                    <p>اللغة الأم</p>
-                    <div class="stars">★★★★★</div>
-                </div>
-                <div class="language-card">
-                    <i class="fas fa-language"></i>
-                    <h3>الإنجليزية</h3>
-                    <p>متقدم</p>
-                    <div class="stars">★★★★☆</div>
-                </div>
-                <div class="language-card">
-                    <i class="fas fa-language"></i>
-                    <h3>الروسية</h3>
-                    <p>مبتدئ</p>
-                    <div class="stars">★★☆☆☆</div>
-                </div>
+          </div>
+        </div>
+      </section>
+      <section id="portfolio" class="py-24 px-4 relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">My Portfolio</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-green-500 mx-auto rounded-full mb-6">
             </div>
-        </section>
-
-        <!-- الأعمال السابقة -->
-        <section id="portfolio">
-            <h2>أعمالي</h2>
-            <div class="portfolio-filters">
-                <button class="filter-btn active" data-filter="all">الكل</button>
-                <button class="filter-btn" data-filter="logos">شعارات</button>
-                <button class="filter-btn" data-filter="social">سوشيال ميديا</button>
-                <button class="filter-btn" data-filter="branding">هوية بصرية</button>
+            <p class="text-gray-300 text-lg max-w-2xl mx-auto">Explore my creative work spanning graphic design and
+              front-end development projects</p>
+          </div>
+          <div class="flex flex-wrap justify-center gap-3 mb-12" id="portfolio-filters"><button data-filter="all"
+              class="portfolio-filter px-6 py-3 rounded-full font-medium transition-all duration-300 whitespace-nowrap cursor-pointer bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/30">All
+              Projects</button><button data-filter="graphic-design"
+              class="portfolio-filter px-6 py-3 rounded-full font-medium transition-all duration-300 whitespace-nowrap cursor-pointer bg-white/10 backdrop-blur-sm text-gray-300 hover:bg-white/20 border border-white/10">Graphic
+              Design</button><button data-filter="front-end"
+              class="portfolio-filter px-6 py-3 rounded-full font-medium transition-all duration-300 whitespace-nowrap cursor-pointer bg-white/10 backdrop-blur-sm text-gray-300 hover:bg-white/20 border border-white/10">Front-End</button>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div data-category="graphic-design"
+              class="portfolio-item group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 cursor-pointer">
+              <div class="relative h-56 md:h-64 overflow-hidden"><img alt="Brand Identity Design"
+                  class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                  src="./Abdallah_files/006469b0a3c5b41fb8206d7dcbf4cce1.jpg">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300">
+                </div>
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <button
+                    class="px-6 py-3 bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300 whitespace-nowrap cursor-pointer">View
+                    Details</button>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                  Brand Identity Design</h3>
+                <p class="text-gray-400 text-sm mb-4 line-clamp-2">Complete brand identity package including logo, color
+                  palette, and brand guidelines for a modern tech startup.</p>
+                <div class="flex flex-wrap gap-2"><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Branding</span><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Logo
+                    Design</span><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Identity</span>
+                </div>
+              </div>
             </div>
-            <div class="portfolio-gallery">
-                <div class="portfolio-item" data-category="logos">
-                    <img src="project1.jpg" alt="تصميم شعار احترافي" loading="lazy">
-                    <div class="overlay">
-                        <h3>تصميم شعار</h3>
-                        <p>شعار احترافي لشركة تقنية</p>
-                        <a href="#" class="view-project">عرض المشروع</a>
-                    </div>
+            <div data-category="graphic-design"
+              class="portfolio-item group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 cursor-pointer">
+              <div class="relative h-56 md:h-64 overflow-hidden"><img alt="Social Media Campaign"
+                  class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                  src="./Abdallah_files/search-image.jpg">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300">
                 </div>
-                <div class="portfolio-item" data-category="social">
-                    <img src="project2.jpg" alt="تصميم منشور سوشيال ميديا" loading="lazy">
-                    <div class="overlay">
-                        <h3>منشور سوشيال ميديا</h3>
-                        <p>حملة تسويقية ناجحة</p>
-                        <a href="#" class="view-project">عرض المشروع</a>
-                    </div>
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <button
+                    class="px-6 py-3 bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300 whitespace-nowrap cursor-pointer">View
+                    Details</button>
                 </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                  Social Media Campaign</h3>
+                <p class="text-gray-400 text-sm mb-4 line-clamp-2">Eye-catching social media graphics for Instagram and
+                  Facebook marketing campaign with consistent visual theme.</p>
+                <div class="flex flex-wrap gap-2"><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Social
+                    Media</span><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Marketing</span><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Graphics</span>
+                </div>
+              </div>
             </div>
-        </section>
-
-        <!-- الإحصائيات -->
-        <section id="stats">
-            <h2>إحصائيات</h2>
-            <div class="stats-container">
-                <div class="stat-card">
-                    <i class="fas fa-project-diagram"></i>
-                    <h3 class="counter" data-target="50">0</h3>
-                    <p>مشروع مكتمل</p>
+            <div data-category="graphic-design"
+              class="portfolio-item group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 cursor-pointer">
+              <div class="relative h-56 md:h-64 overflow-hidden"><img alt="Corporate Presentation"
+                  class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                  src="./Abdallah_files/search-image(1).jpg">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300">
                 </div>
-                <div class="stat-card">
-                    <i class="fas fa-clock"></i>
-                    <h3 class="counter" data-target="9">0</h3>
-                    <p>أشهر من الخبرة</p>
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <button
+                    class="px-6 py-3 bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300 whitespace-nowrap cursor-pointer">View
+                    Details</button>
                 </div>
-                <div class="stat-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3 class="counter" data-target="30">0</h3>
-                    <p>زيادة المشاركة</p>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                  Corporate Presentation</h3>
+                <p class="text-gray-400 text-sm mb-4 line-clamp-2">Professional PowerPoint presentation design with
+                  modern layouts, infographics, and data visualization.</p>
+                <div class="flex flex-wrap gap-2"><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Presentation</span><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Corporate</span><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Infographics</span>
                 </div>
+              </div>
             </div>
-        </section>
-
-        <!-- التوصيات -->
-        <section id="testimonials">
-            <h2>آراء العملاء</h2>
-            <div class="testimonials-slider">
-                <div class="testimonial">
-                    <img src="client1.jpg" alt="أحمد محمد" class="client-photo">
-                    <div class="testimonial-content">
-                        <p>"عبدالله مصمم موهوب يتميز بالإبداع والالتزام. ساعدني في تطوير هوية بصرية متكاملة لشركتي."</p>
-                        <div class="client-info">
-                            <h4>أحمد محمد</h4>
-                            <p>مدير تسويق</p>
-                            <div class="rating">★★★★★</div>
-                        </div>
-                    </div>
+            <div data-category="front-end"
+              class="portfolio-item group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 cursor-pointer">
+              <div class="relative h-56 md:h-64 overflow-hidden"><img alt="Restaurant Landing Page"
+                  class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                  src="./Abdallah_files/search-image(2).jpg">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300">
                 </div>
-                <div class="testimonial">
-                    <img src="client2.jpg" alt="سارة علي" class="client-photo">
-                    <div class="testimonial-content">
-                        <p>"تجربة رائعة في العمل مع عبدالله. تصاميم احترافية وخدمة عملاء ممتازة."</p>
-                        <div class="client-info">
-                            <h4>سارة علي</h4>
-                            <p>صاحبة متجر إلكتروني</p>
-                            <div class="rating">★★★★★</div>
-                        </div>
-                    </div>
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <button
+                    class="px-6 py-3 bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300 whitespace-nowrap cursor-pointer">View
+                    Details</button>
                 </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                  Restaurant Landing Page</h3>
+                <p class="text-gray-400 text-sm mb-4 line-clamp-2">Responsive landing page for a restaurant with menu
+                  showcase, reservation system, and elegant animations.</p>
+                <div class="flex flex-wrap gap-2"><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">HTML</span><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">CSS</span><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Responsive</span>
+                </div>
+              </div>
             </div>
-        </section>
-
-        <!-- الأسئلة الشائعة -->
-        <section id="faq">
-            <h2>الأسئلة الشائعة</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <h3>كيف يمكنني التواصل معك؟</h3>
-                    <div class="faq-answer">
-                        <p>يمكنك التواصل معي عبر:</p>
-                        <ul>
-                            <li>البريد الإلكتروني: abdallaahsam66@gmail.com</li>
-                            <li>نموذج الاتصال أدناه</li>
-                            <li>حسابات التواصل الاجتماعي</li>
-                        </ul>
-                    </div>
+            <div data-category="front-end"
+              class="portfolio-item group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 cursor-pointer">
+              <div class="relative h-56 md:h-64 overflow-hidden"><img alt="Portfolio Website"
+                  class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                  src="./Abdallah_files/search-image(3).jpg">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300">
                 </div>
-                <div class="faq-item">
-                    <h3>ما هي أسعار خدماتك؟</h3>
-                    <div class="faq-answer">
-                        <p>تختلف الأسعار حسب:</p>
-                        <ul>
-                            <li>نوع المشروع وتعقيده</li>
-                            <li>المدة الزمنية المطلوبة</li>
-                            <li>عدد التعديلات المطلوبة</li>
-                        </ul>
-                        <p>تواصل معي للحصول على عرض سعر مخصص لمشروعك.</p>
-                    </div>
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <button
+                    class="px-6 py-3 bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300 whitespace-nowrap cursor-pointer">View
+                    Details</button>
                 </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                  Portfolio Website</h3>
+                <p class="text-gray-400 text-sm mb-4 line-clamp-2">Personal portfolio website with smooth animations,
+                  dark mode, and interactive project gallery.</p>
+                <div class="flex flex-wrap gap-2"><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Portfolio</span><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Animation</span><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Dark
+                    Mode</span></div>
+              </div>
             </div>
-        </section>
-
-        <!-- نموذج الاتصال -->
-        <footer id="contact">
-            <h2>اتصل بي</h2>
-            <div class="contact-container">
-                <form action="mailto:abdallaahsam66@gmail.com" method="post" enctype="text/plain" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">الاسم</label>
-                        <input type="text" id="name" name="name" placeholder="أدخل اسمك" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">البريد الإلكتروني</label>
-                        <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">الموضوع</label>
-                        <input type="text" id="subject" name="subject" placeholder="موضوع الرسالة" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">الرسالة</label>
-                        <textarea id="message" name="message" placeholder="اكتب رسالتك هنا" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> إرسال</button>
-                </form>
-                <div class="contact-info">
-                    <h3>معلومات التواصل</h3>
-                    <p><i class="fas fa-envelope"></i> abdallaahsam66@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> +20 111 230 2757</p>
-                    <p><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</p>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/abdallah-ahmed-samir-4b027231a/" target="_blank" rel="noopener" data-tooltip="لينكدإن" aria-label="رابط لينكدإن">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://x.com/abdallahsam66" target="_blank" rel="noopener" data-tooltip="تويتر" aria-label="رابط تويتر">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://github.com/abdallaahsam" target="_blank" rel="noopener" data-tooltip="جيتهاب" aria-label="رابط جيتهاب">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.behance.net/abdallaahsam" target="_blank" rel="noopener" data-tooltip="بيهانس" aria-label="رابط بيهانس">
-                            <i class="fab fa-behance"></i>
-                        </a>
-                        <a href="https://www.facebook.com/abdallaahsam" target="_blank" rel="noopener" data-tooltip="فيسبوك" aria-label="رابط فيسبوك">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                    </div>
+            <div data-category="front-end"
+              class="portfolio-item group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 cursor-pointer">
+              <div class="relative h-56 md:h-64 overflow-hidden"><img alt="E-commerce Product Page"
+                  class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                  src="./Abdallah_files/search-image(4).jpg">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300">
                 </div>
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <button
+                    class="px-6 py-3 bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300 whitespace-nowrap cursor-pointer">View
+                    Details</button>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                  E-commerce Product Page</h3>
+                <p class="text-gray-400 text-sm mb-4 line-clamp-2">Product detail page with image gallery, size
+                  selector, and add to cart functionality.</p>
+                <div class="flex flex-wrap gap-2"><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">E-commerce</span><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">UI/UX</span><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Interactive</span>
+                </div>
+              </div>
             </div>
-        </footer>
+            <div data-category="graphic-design"
+              class="portfolio-item group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 cursor-pointer">
+              <div class="relative h-56 md:h-64 overflow-hidden"><img alt="Event Poster Design"
+                  class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                  src="./Abdallah_files/search-image(5).jpg">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300">
+                </div>
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <button
+                    class="px-6 py-3 bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300 whitespace-nowrap cursor-pointer">View
+                    Details</button>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                  Event Poster Design</h3>
+                <p class="text-gray-400 text-sm mb-4 line-clamp-2">Creative poster design for university event with bold
+                  typography and vibrant color scheme.</p>
+                <div class="flex flex-wrap gap-2"><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Poster</span><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Event</span><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Typography</span>
+                </div>
+              </div>
+            </div>
+            <div data-category="front-end"
+              class="portfolio-item group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 cursor-pointer">
+              <div class="relative h-56 md:h-64 overflow-hidden"><img alt="Business Dashboard"
+                  class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                  src="./Abdallah_files/search-image(6).jpg">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300">
+                </div>
+                <div
+                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <button
+                    class="px-6 py-3 bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300 whitespace-nowrap cursor-pointer">View
+                    Details</button>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                  Business Dashboard</h3>
+                <p class="text-gray-400 text-sm mb-4 line-clamp-2">Admin dashboard interface with charts, data tables,
+                  and responsive sidebar navigation.</p>
+                <div class="flex flex-wrap gap-2"><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Dashboard</span><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Data
+                    Viz</span><span
+                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Admin</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="services" class="py-24 px-4 relative">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">What I Offer</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-green-500 mx-auto rounded-full mb-6">
+            </div>
+            <p class="text-gray-300 text-lg max-w-2xl mx-auto">Professional design and development services tailored to
+              your business needs</p>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-cyan-500/20 to-cyan-500/10 border border-cyan-500/30 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                <i class="ri-instagram-line text-3xl text-cyan-400"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                Social Media Designs</h3>
+              <p class="text-gray-300 leading-relaxed mb-6">Eye-catching posts, stories, and cover designs for
+                Instagram, Facebook, and LinkedIn that boost engagement and brand visibility.</p>
+              <div class="space-y-2">
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-cyan-400"></i><span
+                    class="text-gray-300 text-sm">Post Designs</span></div>
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-cyan-400"></i><span
+                    class="text-gray-300 text-sm">Story Templates</span></div>
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-cyan-400"></i><span
+                    class="text-gray-300 text-sm">Cover Images</span></div>
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-cyan-400"></i><span
+                    class="text-gray-300 text-sm">Ad Creatives</span></div>
+              </div>
+              <div class="mt-6 pt-6 border-t border-white/10"><a href="#contact"
+                  class="text-cyan-400 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all duration-300 cursor-pointer"><span>Get
+                    Started</span><i class="ri-arrow-right-line"></i></a></div>
+            </div>
+            <div
+              class="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-purple-500/20 to-purple-500/10 border border-purple-500/30 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                <i class="ri-palette-line text-3xl text-purple-400"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                Branding Basics</h3>
+              <p class="text-gray-300 leading-relaxed mb-6">Professional logo design, color palettes, and brand identity
+                elements that make your business stand out.</p>
+              <div class="space-y-2">
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-purple-400"></i><span
+                    class="text-gray-300 text-sm">Logo Design</span></div>
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-purple-400"></i><span
+                    class="text-gray-300 text-sm">Color Schemes</span></div>
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-purple-400"></i><span
+                    class="text-gray-300 text-sm">Brand Guidelines</span></div>
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-purple-400"></i><span
+                    class="text-gray-300 text-sm">Business Cards</span></div>
+              </div>
+              <div class="mt-6 pt-6 border-t border-white/10"><a href="#contact"
+                  class="text-cyan-400 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all duration-300 cursor-pointer"><span>Get
+                    Started</span><i class="ri-arrow-right-line"></i></a></div>
+            </div>
+            <div
+              class="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-green-500/20 to-green-500/10 border border-green-500/30 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                <i class="ri-layout-line text-3xl text-green-400"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">UI
+                Visuals</h3>
+              <p class="text-gray-300 leading-relaxed mb-6">Modern user interface designs for websites and apps with
+                focus on usability and aesthetic appeal.</p>
+              <div class="space-y-2">
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-green-400"></i><span
+                    class="text-gray-300 text-sm">UI Mockups</span></div>
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-green-400"></i><span
+                    class="text-gray-300 text-sm">Icon Sets</span></div>
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-green-400"></i><span
+                    class="text-gray-300 text-sm">Web Graphics</span></div>
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-green-400"></i><span
+                    class="text-gray-300 text-sm">App Screens</span></div>
+              </div>
+              <div class="mt-6 pt-6 border-t border-white/10"><a href="#contact"
+                  class="text-cyan-400 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all duration-300 cursor-pointer"><span>Get
+                    Started</span><i class="ri-arrow-right-line"></i></a></div>
+            </div>
+            <div
+              class="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-cyan-500/20 to-cyan-500/10 border border-cyan-500/30 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                <i class="ri-code-s-slash-line text-3xl text-cyan-400"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                Front-End Landing Pages</h3>
+              <p class="text-gray-300 leading-relaxed mb-6">Responsive, pixel-perfect landing pages built with HTML and
+                CSS that convert visitors into customers.</p>
+              <div class="space-y-2">
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-cyan-400"></i><span
+                    class="text-gray-300 text-sm">Responsive Design</span></div>
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-cyan-400"></i><span
+                    class="text-gray-300 text-sm">Clean Code</span></div>
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-cyan-400"></i><span
+                    class="text-gray-300 text-sm">Fast Loading</span></div>
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-cyan-400"></i><span
+                    class="text-gray-300 text-sm">Cross-Browser</span></div>
+              </div>
+              <div class="mt-6 pt-6 border-t border-white/10"><a href="#contact"
+                  class="text-cyan-400 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all duration-300 cursor-pointer"><span>Get
+                    Started</span><i class="ri-arrow-right-line"></i></a></div>
+            </div>
+            <div
+              class="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-purple-500/20 to-purple-500/10 border border-purple-500/30 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                <i class="ri-presentation-line text-3xl text-purple-400"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                Corporate Presentations</h3>
+              <p class="text-gray-300 leading-relaxed mb-6">Professional PowerPoint and presentation designs with
+                compelling visuals and clear data visualization.</p>
+              <div class="space-y-2">
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-purple-400"></i><span
+                    class="text-gray-300 text-sm">Slide Design</span></div>
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-purple-400"></i><span
+                    class="text-gray-300 text-sm">Infographics</span></div>
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-purple-400"></i><span
+                    class="text-gray-300 text-sm">Charts &amp; Graphs</span></div>
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-purple-400"></i><span
+                    class="text-gray-300 text-sm">Templates</span></div>
+              </div>
+              <div class="mt-6 pt-6 border-t border-white/10"><a href="#contact"
+                  class="text-cyan-400 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all duration-300 cursor-pointer"><span>Get
+                    Started</span><i class="ri-arrow-right-line"></i></a></div>
+            </div>
+            <div
+              class="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-green-500/20 to-green-500/10 border border-green-500/30 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                <i class="ri-pencil-ruler-2-line text-3xl text-green-400"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                Custom Graphics</h3>
+              <p class="text-gray-300 leading-relaxed mb-6">Tailored graphic design solutions for any project including
+                posters, flyers, banners, and digital assets.</p>
+              <div class="space-y-2">
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-green-400"></i><span
+                    class="text-gray-300 text-sm">Posters</span></div>
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-green-400"></i><span
+                    class="text-gray-300 text-sm">Flyers</span></div>
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-green-400"></i><span
+                    class="text-gray-300 text-sm">Banners</span></div>
+                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-green-400"></i><span
+                    class="text-gray-300 text-sm">Digital Assets</span></div>
+              </div>
+              <div class="mt-6 pt-6 border-t border-white/10"><a href="#contact"
+                  class="text-cyan-400 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all duration-300 cursor-pointer"><span>Get
+                    Started</span><i class="ri-arrow-right-line"></i></a></div>
+            </div>
+          </div>
+          <div
+            class="mt-16 backdrop-blur-xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-green-500/10 border border-white/10 rounded-2xl p-12 text-center">
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Start Your Project?</h3>
+            <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">Let's collaborate to bring your vision to life with
+              professional design and development services</p><a href="#contact"
+              class="inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50 whitespace-nowrap cursor-pointer">Contact
+              Me Now</a>
+          </div>
+        </div>
+      </section>
+      <section id="testimonials"
+        class="py-24 px-4 relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Client Testimonials</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-green-500 mx-auto rounded-full mb-6">
+            </div>
+            <p class="text-gray-300 text-lg max-w-2xl mx-auto">What clients say about working with me</p>
+          </div>
+          <div class="max-w-4xl mx-auto mb-12">
+            <div
+              class="relative backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-3xl p-8 md:p-12 shadow-2xl">
+              <div class="absolute top-6 left-6 md:top-8 md:left-8"><i
+                  class="ri-double-quotes-l text-5xl md:text-6xl text-cyan-400/30"></i></div>
+              <div class="flex justify-center gap-2 mb-6 mt-8"><i class="ri-star-fill text-yellow-400 text-2xl"></i><i
+                  class="ri-star-fill text-yellow-400 text-2xl"></i><i
+                  class="ri-star-fill text-yellow-400 text-2xl"></i><i
+                  class="ri-star-fill text-yellow-400 text-2xl"></i><i
+                  class="ri-star-fill text-yellow-400 text-2xl"></i></div>
+              <p id="testimonial-quote"
+                class="text-gray-200 text-xl md:text-2xl leading-relaxed text-center mb-8 font-light italic px-4 md:px-8">
+                "Abdallah delivered exceptional social media designs that significantly increased our engagement. His
+                creativity and professionalism are outstanding."</p>
+              <div class="flex flex-col items-center gap-4 pt-6 border-t border-white/20"><img id="testimonial-image"
+                  alt="Ahmed Hassan"
+                  class="w-20 h-20 rounded-full object-cover object-top border-4 border-cyan-400/50 shadow-lg"
+                  src="./Abdallah_files/df27d0759fe61c721c7df18eac1c1ad8.jpg">
+                <div class="text-center">
+                  <h4 id="testimonial-name" class="text-white font-bold text-xl mb-1">Ahmed Hassan</h4>
+                  <p id="testimonial-role" class="text-cyan-400 text-base font-medium">Marketing Director</p>
+                  <p id="testimonial-company" class="text-gray-400 text-sm">Tech Solutions Egypt</p>
+                </div>
+              </div><button id="testimonial-prev"
+                class="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full border border-white/20 transition-all duration-300 cursor-pointer group"
+                aria-label="Previous testimonial"><i
+                  class="ri-arrow-left-s-line text-2xl text-white group-hover:text-cyan-400 transition-colors"></i></button><button
+                id="testimonial-next"
+                class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full border border-white/20 transition-all duration-300 cursor-pointer group"
+                aria-label="Next testimonial"><i
+                  class="ri-arrow-right-s-line text-2xl text-white group-hover:text-cyan-400 transition-colors"></i></button>
+            </div>
+            <div id="testimonial-dots" class="flex justify-center gap-3 mt-8"><button
+                class="testimonial-dot transition-all duration-300 rounded-full cursor-pointer w-12 h-3 bg-gradient-to-r from-cyan-500 to-purple-500"
+                aria-label="Go to testimonial 1" data-index="0"></button><button
+                class="testimonial-dot transition-all duration-300 rounded-full cursor-pointer w-3 h-3 bg-white/30 hover:bg-white/50"
+                aria-label="Go to testimonial 2" data-index="1"></button><button
+                class="testimonial-dot transition-all duration-300 rounded-full cursor-pointer w-3 h-3 bg-white/30 hover:bg-white/50"
+                aria-label="Go to testimonial 3" data-index="2"></button><button
+                class="testimonial-dot transition-all duration-300 rounded-full cursor-pointer w-3 h-3 bg-white/30 hover:bg-white/50"
+                aria-label="Go to testimonial 4" data-index="3"></button><button
+                class="testimonial-dot transition-all duration-300 rounded-full cursor-pointer w-3 h-3 bg-white/30 hover:bg-white/50"
+                aria-label="Go to testimonial 5" data-index="4"></button><button
+                class="testimonial-dot transition-all duration-300 rounded-full cursor-pointer w-3 h-3 bg-white/30 hover:bg-white/50"
+                aria-label="Go to testimonial 6" data-index="5"></button></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+            <div
+              class="backdrop-blur-xl bg-white/5 border rounded-2xl p-6 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-xl border-white/10 hover:border-white/30">
+              <div class="flex gap-1 mb-3"><i class="ri-star-fill text-yellow-400 text-sm"></i><i
+                  class="ri-star-fill text-yellow-400 text-sm"></i><i
+                  class="ri-star-fill text-yellow-400 text-sm"></i><i
+                  class="ri-star-fill text-yellow-400 text-sm"></i><i class="ri-star-fill text-yellow-400 text-sm"></i>
+              </div>
+              <p class="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">"Abdallah delivered exceptional social
+                media designs that significantly increased our engagement. His creativity and professionalism are
+                outstanding."</p>
+              <div class="flex items-center gap-3 pt-4 border-t border-white/10"><img alt="Ahmed Hassan"
+                  class="w-12 h-12 rounded-full object-cover object-top border-2 border-cyan-400/50"
+                  src="./Abdallah_files/df27d0759fe61c721c7df18eac1c1ad8.jpg">
+                <div>
+                  <h5 class="text-white font-semibold text-sm">Ahmed Hassan</h5>
+                  <p class="text-cyan-400 text-xs">Marketing Director</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="backdrop-blur-xl bg-white/5 border rounded-2xl p-6 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-xl border-cyan-500 shadow-lg shadow-cyan-500/20">
+              <div class="flex gap-1 mb-3"><i class="ri-star-fill text-yellow-400 text-sm"></i><i
+                  class="ri-star-fill text-yellow-400 text-sm"></i><i
+                  class="ri-star-fill text-yellow-400 text-sm"></i><i
+                  class="ri-star-fill text-yellow-400 text-sm"></i><i class="ri-star-fill text-yellow-400 text-sm"></i>
+              </div>
+              <p class="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">"The brand identity package was exactly
+                what we needed. Abdallah understood our vision and brought it to life beautifully."</p>
+              <div class="flex items-center gap-3 pt-4 border-t border-white/10"><img alt="Sara Mohamed"
+                  class="w-12 h-12 rounded-full object-cover object-top border-2 border-cyan-400/50"
+                  src="./Abdallah_files/search-image(7).jpg">
+                <div>
+                  <h5 class="text-white font-semibold text-sm">Sara Mohamed</h5>
+                  <p class="text-cyan-400 text-xs">Startup Founder</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="backdrop-blur-xl bg-white/5 border rounded-2xl p-6 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-xl border-white/10 hover:border-white/30">
+              <div class="flex gap-1 mb-3"><i class="ri-star-fill text-yellow-400 text-sm"></i><i
+                  class="ri-star-fill text-yellow-400 text-sm"></i><i
+                  class="ri-star-fill text-yellow-400 text-sm"></i><i
+                  class="ri-star-fill text-yellow-400 text-sm"></i><i class="ri-star-fill text-yellow-400 text-sm"></i>
+              </div>
+              <p class="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">"Our new website looks amazing and
+                works perfectly on all devices. Great attention to detail and quick turnaround time."</p>
+              <div class="flex items-center gap-3 pt-4 border-t border-white/10"><img alt="Omar Khalil"
+                  class="w-12 h-12 rounded-full object-cover object-top border-2 border-cyan-400/50"
+                  src="./Abdallah_files/search-image(8).jpg">
+                <div>
+                  <h5 class="text-white font-semibold text-sm">Omar Khalil</h5>
+                  <p class="text-cyan-400 text-xs">Restaurant Owner</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="backdrop-blur-xl bg-white/5 border rounded-2xl p-6 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-xl border-white/10 hover:border-white/30">
+              <div class="flex gap-1 mb-3"><i class="ri-star-fill text-yellow-400 text-sm"></i><i
+                  class="ri-star-fill text-yellow-400 text-sm"></i><i
+                  class="ri-star-fill text-yellow-400 text-sm"></i><i
+                  class="ri-star-fill text-yellow-400 text-sm"></i><i class="ri-star-fill text-yellow-400 text-sm"></i>
+              </div>
+              <p class="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">"The event posters and promotional
+                materials were stunning. Abdallah has a great eye for design and understands client needs."</p>
+              <div class="flex items-center gap-3 pt-4 border-t border-white/10"><img alt="Layla Ibrahim"
+                  class="w-12 h-12 rounded-full object-cover object-top border-2 border-cyan-400/50"
+                  src="./Abdallah_files/search-image(9).jpg">
+                <div>
+                  <h5 class="text-white font-semibold text-sm">Layla Ibrahim</h5>
+                  <p class="text-cyan-400 text-xs">Event Coordinator</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="backdrop-blur-xl bg-white/5 border rounded-2xl p-6 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-xl border-white/10 hover:border-white/30">
+              <div class="flex gap-1 mb-3"><i class="ri-star-fill text-yellow-400 text-sm"></i><i
+                  class="ri-star-fill text-yellow-400 text-sm"></i><i
+                  class="ri-star-fill text-yellow-400 text-sm"></i><i
+                  class="ri-star-fill text-yellow-400 text-sm"></i><i class="ri-star-fill text-yellow-400 text-sm"></i>
+              </div>
+              <p class="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">"Working with Abdallah was a pleasure.
+                He created stunning product visuals that boosted our online sales significantly."</p>
+              <div class="flex items-center gap-3 pt-4 border-t border-white/10"><img alt="Youssef Ali"
+                  class="w-12 h-12 rounded-full object-cover object-top border-2 border-cyan-400/50"
+                  src="./Abdallah_files/search-image(10).jpg">
+                <div>
+                  <h5 class="text-white font-semibold text-sm">Youssef Ali</h5>
+                  <p class="text-cyan-400 text-xs">E-commerce Manager</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="backdrop-blur-xl bg-white/5 border rounded-2xl p-6 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-xl border-white/10 hover:border-white/30">
+              <div class="flex gap-1 mb-3"><i class="ri-star-fill text-yellow-400 text-sm"></i><i
+                  class="ri-star-fill text-yellow-400 text-sm"></i><i
+                  class="ri-star-fill text-yellow-400 text-sm"></i><i
+                  class="ri-star-fill text-yellow-400 text-sm"></i><i class="ri-star-fill text-yellow-400 text-sm"></i>
+              </div>
+              <p class="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">"The social media templates are exactly
+                what I needed. Professional, modern, and easy to customize. Highly recommended!"</p>
+              <div class="flex items-center gap-3 pt-4 border-t border-white/10"><img alt="Nour Mahmoud"
+                  class="w-12 h-12 rounded-full object-cover object-top border-2 border-cyan-400/50"
+                  src="./Abdallah_files/search-image(11).jpg">
+                <div>
+                  <h5 class="text-white font-semibold text-sm">Nour Mahmoud</h5>
+                  <p class="text-cyan-400 text-xs">Content Creator</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="py-24 px-4 relative">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Get In Touch</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-green-500 mx-auto rounded-full mb-6">
+            </div>
+            <p class="text-gray-300 text-lg max-w-2xl mx-auto">Have a project in mind? Let's discuss how I can help
+              bring your ideas to life</p>
+          </div>
+          <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+            <div class="space-y-6 lg:space-y-8">
+              <div class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 lg:p-8">
+                <h3 class="text-xl lg:text-2xl font-bold text-white mb-6">Contact Information</h3>
+                <div class="space-y-6">
+                  <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 flex items-center justify-center bg-cyan-500/20 rounded-xl flex-shrink-0"><i
+                        class="ri-map-pin-line text-2xl text-cyan-400"></i></div>
+                    <div>
+                      <h4 class="text-white font-semibold mb-1">Location</h4>
+                      <p class="text-gray-300 text-sm lg:text-base">Cairo, Egypt</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 flex items-center justify-center bg-purple-500/20 rounded-xl flex-shrink-0"><i
+                        class="ri-mail-line text-2xl text-purple-400"></i></div>
+                    <div>
+                      <h4 class="text-white font-semibold mb-1">Email</h4>
+                      <p class="text-gray-300 text-sm lg:text-base">Available upon request</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 flex items-center justify-center bg-green-500/20 rounded-xl flex-shrink-0"><i
+                        class="ri-linkedin-line text-2xl text-green-400"></i></div>
+                    <div class="min-w-0 flex-1">
+                      <h4 class="text-white font-semibold mb-1">LinkedIn</h4><a
+                        href="https://linkedin.com/in/abdallaahsam" target="_blank" rel="noopener noreferrer"
+                        class="text-cyan-400 hover:underline cursor-pointer text-sm lg:text-base break-words">linkedin.com/in/abdallaahsam</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="backdrop-blur-xl bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-white/10 rounded-2xl p-6 lg:p-8">
+                <h3 class="text-xl lg:text-2xl font-bold text-white mb-6">Quick Connect</h3>
+                <div class="space-y-4"><a href="https://wa.me/+20111230757" target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300 group cursor-pointer">
+                    <div
+                      class="w-12 h-12 flex items-center justify-center bg-green-500/20 rounded-xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                      <i class="ri-whatsapp-line text-2xl text-green-400"></i>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <h4 class="text-white font-semibold">WhatsApp</h4>
+                      <p class="text-gray-300 text-sm">Chat with me directly</p>
+                    </div><i class="ri-arrow-right-line text-cyan-400 text-xl flex-shrink-0"></i>
+                  </a><a href="https://linkedin.com/in/abdallaahsam" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300 group cursor-pointer">
+                    <div
+                      class="w-12 h-12 flex items-center justify-center bg-cyan-500/20 rounded-xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                      <i class="ri-linkedin-fill text-2xl text-cyan-400"></i>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <h4 class="text-white font-semibold">LinkedIn</h4>
+                      <p class="text-gray-300 text-sm">Connect professionally</p>
+                    </div><i class="ri-arrow-right-line text-cyan-400 text-xl flex-shrink-0"></i>
+                  </a></div>
+              </div>
+            </div>
+            <div class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 lg:p-8">
+              <h3 class="text-xl lg:text-2xl font-bold text-white mb-6">Send a Message</h3>
+              <form class="space-y-6" id="contact-form">
+                <div><label for="name" class="block text-white font-semibold mb-2">Your Name</label><input id="name"
+                    required=""
+                    class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors duration-300 text-sm"
+                    placeholder="Enter your name" type="text" value="" name="name"></div>
+                <div><label for="email" class="block text-white font-semibold mb-2">Email Address</label><input
+                    id="email" required=""
+                    class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors duration-300 text-sm"
+                    placeholder="your.email@example.com" type="email" value="" name="email"></div>
+                <div><label for="subject" class="block text-white font-semibold mb-2">Subject</label><input id="subject"
+                    required=""
+                    class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors duration-300 text-sm"
+                    placeholder="What&#39;s this about?" type="text" value="" name="subject"></div>
+                <div><label for="message" class="block text-white font-semibold mb-2">Message</label><textarea
+                    id="message" name="message" required="" maxlength="500" rows="5"
+                    class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors duration-300 resize-none text-sm"
+                    placeholder="Tell me about your project..."></textarea>
+                  <p class="text-gray-400 text-xs mt-2">Maximum 500 characters</p>
+                </div><button type="submit"
+                  class="w-full px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap flex items-center justify-center gap-2 cursor-pointer">Send
+                  Message<i class="ri-send-plane-fill"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="py-12 px-4 border-t border-white/10">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 class="text-2xl font-bold text-white mb-2">Abdallah Ahmed Samir</h3>
+              <p class="text-xl text-cyan-400 mb-4" style="font-family: Cairo, sans-serif;">بودة</p>
+              <p class="text-gray-300">Graphic Designer &amp; Front-End Developer based in Cairo, Egypt</p>
+            </div>
+            <div>
+              <h4 class="text-white font-bold mb-4">Quick Links</h4>
+              <ul class="space-y-2">
+                <li><a href="#about"
+                    class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 cursor-pointer">About Me</a>
+                </li>
+                <li><a href="#portfolio"
+                    class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 cursor-pointer">Portfolio</a>
+                </li>
+                <li><a href="#services"
+                    class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 cursor-pointer">Services</a>
+                </li>
+                <li><a href="#contact"
+                    class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 cursor-pointer">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-white font-bold mb-4">Connect With Me</h4>
+              <div class="flex gap-4"><a href="https://linkedin.com/in/abdallaahsam" target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-cyan-500 hover:border-cyan-500 transition-all duration-300 hover:scale-110 cursor-pointer"><i
+                    class="ri-linkedin-fill text-xl"></i></a><a href="https://wa.me/+20111230757" target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-green-500 hover:border-green-500 transition-all duration-300 hover:scale-110 cursor-pointer"><i
+                    class="ri-whatsapp-fill text-xl"></i></a><a href="#contact"
+                  class="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-purple-500 hover:border-purple-500 transition-all duration-300 hover:scale-110 cursor-pointer"><i
+                    class="ri-mail-fill text-xl"></i></a></div>
+            </div>
+          </div>
+          <div class="pt-8 border-t border-white/10 text-center">
+            <p class="text-gray-400">© 2025 Abdallah Ahmed Samir. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
+  </div>
 
-    <!-- زر العودة للأعلى -->
-    <button onclick="scrollToTop()" class="back-to-top" aria-label="العودة إلى أعلى الصفحة">
-        <i class="fas fa-arrow-up"></i>
-    </button>
 
-    <!-- السكربتات -->
-    <script src="particles.min.js"></script>
-    <script src="particles.min2.js"></script>
-    <script src="script.js"></script>
+  <script src="./fix_interactivity.js"></script>
 </body>
+
 </html>
