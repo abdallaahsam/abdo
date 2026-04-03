@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio of Abdallah Ahmed Samir. Graphic Design, Branding, UI/UX, and Web Development Projects.">
+    <meta name="keywords" content="Portfolio, Graphic Design Portfolio, Web Development Projects, Case Studies">
+    <meta name="geo.position" content="30.0444;31.2357">
+    <meta name="geo.region" content="EG-C">
+    <meta name="geo.placename" content="Cairo">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon/favicon.ico">
+
+    <meta name="theme-color" content="#2563eb">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Portfolio - Abdallah Ahmed Samir">
+    <meta property="og:description"
+        content="Explore my latest creative work in graphic design and front-end development.">
+
+    <title>Portfolio - Abdallah Ahmed Samir</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#ecfeff',
+                            100: '#cffafe',
+                            200: '#a5f3fc',
+                            300: '#67e8f9',
+                            400: '#22d3ee',
+                            500: '#06b6d4',
+                            600: '#0891b2',
+                            700: '#0e7490',
+                            800: '#155e75',
+                            900: '#164e63',
+                            950: '#083344',
+                        },
+                        secondary: {
+                            50: '#faf5ff',
+                            100: '#f3e8ff',
+                            200: '#e9d5ff',
+                            300: '#d8b4fe',
+                            400: '#c084fc',
+                            500: '#a855f7',
+                            600: '#9333ea',
+                            700: '#7e22ce',
+                            800: '#6b21a8',
+                            900: '#581c87',
+                            950: '#3b0764',
+                        },
+                        accent: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                            950: '#052e16',
+                            77: '#052e16',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./assets/css/css2.css" rel="stylesheet">
+    <link href="./assets/css/custom.css" rel="stylesheet">
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Custom JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div id="root">
+        <div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+
+            <!-- Navigation -->
+            <nav class="fixed top-0 left-0 w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-white/10">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex items-center justify-between h-20">
+                        <div class="flex-shrink-0">
+                            <a href="index.html" class="text-2xl font-bold text-white tracking-wider">Abdallah<span
+                                    class="text-primary-500">.</span></a>
+                        </div>
+                        <div class="hidden md:block">
+                            <div class="ml-10 flex items-baseline space-x-8">
+                                <a href="index.html"
+                                    class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors uppercase tracking-wide">Home</a>
+                                <a href="about.html"
+                                    class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors uppercase tracking-wide">About</a>
+                                <a href="services.html"
+                                    class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors uppercase tracking-wide">Services</a>
+                                <a href="portfolio.html"
+                                    class="text-white px-3 py-2 rounded-md text-sm font-medium transition-colors uppercase tracking-wide bg-white/10">Portfolio</a>
+                                <a href="contact.html"
+                                    class="px-6 py-2.5 bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-500 hover:to-secondary-500 text-white rounded-xl text-sm font-bold transition-all shadow-lg shadow-primary-500/20 hover:shadow-primary-500/40">Contact</a>
+                            </div>
+                        </div>
+                        <div class="-mr-2 flex md:hidden">
+                            <button type="button"
+                                class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+                                aria-controls="mobile-menu" aria-expanded="false"
+                                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                                <span class="sr-only">Open main menu</span>
+                                <i class="ri-menu-3-line text-2xl"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:hidden bg-gray-900 border-b border-white/10" id="mobile-menu">
+                    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                        <a href="index.html"
+                            class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                        <a href="about.html"
+                            class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                        <a href="services.html"
+                            class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                        <a href="portfolio.html"
+                            class="bg-primary-500/20 text-white block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+                        <a href="contact.html"
+                            class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                    </div>
+                </div>
+            </nav>
+
+            <section id="portfolio"
+                class="pt-32 pb-24 px-4 relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">My Portfolio</h2>
+                        <div
+                            class="w-24 h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 mx-auto rounded-full mb-6">
+                        </div>
+                        <p class="text-gray-300 text-lg max-w-2xl mx-auto">Explore my creative work spanning graphic
+                            design and
+                            front-end development projects</p>
+                    </div>
+                    <div class="flex flex-wrap justify-center gap-3 mb-12" id="portfolio-filters">
+                        <button data-filter="all"
+                            class="portfolio-filter px-6 py-3 rounded-full font-medium transition-all duration-300 whitespace-nowrap cursor-pointer bg-gradient-to-r from-primary-500 to-secondary-500 text-white shadow-lg shadow-primary-500/30">
+                            All Projects
+                        </button>
+                        <button data-filter="graphic-design"
+                            class="portfolio-filter px-6 py-3 rounded-full font-medium transition-all duration-300 whitespace-nowrap cursor-pointer bg-white/10 backdrop-blur-sm text-gray-300 hover:bg-white/20 border border-white/10">
+                            Graphic Design
+                        </button>
+                        <button data-filter="front-end"
+                            class="portfolio-filter px-6 py-3 rounded-full font-medium transition-all duration-300 whitespace-nowrap cursor-pointer bg-white/10 backdrop-blur-sm text-gray-300 hover:bg-white/20 border border-white/10">
+                            Front-End
+                        </button>
+                    </div>
+                    <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    </div>
+                </div>
+            </section>
+
+            <footer class="py-12 px-4 border-t border-white/10 bg-gray-900">
+                <div class="max-w-7xl mx-auto">
+                    <div class="grid md:grid-cols-3 gap-8 mb-8" data-aos="fade-up">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Abdallah Ahmed Samir</h3>
+                            <p class="text-gray-300">Graphic Designer &amp; Front-End Developer based in Cairo, Egypt
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                            <ul class="space-y-2">
+                                <li><a href="about.html"
+                                        class="text-gray-300 hover:text-primary-400 transition-colors duration-300 cursor-pointer">About
+                                        Me</a>
+                                </li>
+                                <li><a href="portfolio.html"
+                                        class="text-primary-400 transition-colors duration-300 cursor-pointer">Portfolio</a>
+                                </li>
+                                <li><a href="services.html"
+                                        class="text-gray-300 hover:text-primary-400 transition-colors duration-300 cursor-pointer">Services</a>
+                                </li>
+                                <li><a href="contact.html"
+                                        class="text-gray-300 hover:text-primary-400 transition-colors duration-300 cursor-pointer">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold mb-4">Connect With Me</h4>
+                            <div class="flex gap-4">
+                                <a href="https://linkedin.com/in/abdallaahsam" target="_blank" rel="noopener noreferrer"
+                                    class="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-primary-500 hover:border-primary-500 transition-all duration-300 hover:scale-110 cursor-pointer">
+                                    <i class="ri-linkedin-fill text-xl"></i>
+                                </a>
+                                <a href="https://wa.me/+201112302757" target="_blank" rel="noopener noreferrer"
+                                    class="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-accent-500 hover:border-accent-500 transition-all duration-300 hover:scale-110 cursor-pointer">
+                                    <i class="ri-whatsapp-fill text-xl"></i>
+                                </a>
+                                <a href="contact.html"
+                                    class="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-secondary-500 hover:border-secondary-500 transition-all duration-300 hover:scale-110 cursor-pointer">
+                                    <i class="ri-mail-fill text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-8 border-t border-white/10 text-center">
+                        <p class="text-gray-400">© 2025 Abdallah Ahmed Samir. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Project Detail Modal -->
+    <div id="project-modal" class="fixed inset-0 z-[100] hidden" aria-labelledby="modal-title" role="dialog"
+        aria-modal="true">
+        <div class="fixed inset-0 bg-gray-900/90 backdrop-blur-sm transition-opacity opacity-0" id="modal-backdrop">
+        </div>
+        <div class="fixed inset-0 z-10 overflow-y-auto">
+            <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+                <div class="relative transform overflow-hidden rounded-2xl bg-gray-900 border border-white/10 text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-4xl opacity-0 scale-95"
+                    id="modal-panel">
+                    <button onclick="closeModal()"
+                        class="absolute top-4 right-4 z-20 p-2 rounded-full bg-black/50 text-white hover:bg-primary-500 transition-colors cursor-pointer">
+                        <i class="ri-close-line text-xl"></i>
+                    </button>
+                    <div class="grid md:grid-cols-2">
+                        <div class="h-64 md:h-auto relative bg-gray-800">
+                            <img id="modal-image" src="" alt="" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent md:hidden"></div>
+                        </div>
+                        <div class="p-8 md:p-10 bg-gray-900">
+                            <div class="mb-6">
+                                <span id="modal-category"
+                                    class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-primary-400 uppercase bg-primary-500/10 rounded-full border border-primary-500/20">Category</span>
+                                <h3 id="modal-title" class="text-3xl font-bold text-white mb-2 leading-tight">Project
+                                    Title</h3>
+                                <p id="modal-subtitle" class="text-gray-400 text-sm">Short tagline or role</p>
+                            </div>
+                            <div class="space-y-6 text-gray-300 mb-8">
+                                <p id="modal-description" class="leading-relaxed text-gray-300">Description goes here...
+                                </p>
+                                <div class="grid grid-cols-2 gap-6 pt-6 border-t border-white/10">
+                                    <div>
+                                        <span
+                                            class="block text-gray-500 text-xs uppercase tracking-wider mb-1">Client</span>
+                                        <span id="modal-client" class="text-white font-medium">Client Name</span>
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="block text-gray-500 text-xs uppercase tracking-wider mb-1">Date</span>
+                                        <span id="modal-date" class="text-white font-medium">Year</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-8">
+                                <span class="block text-gray-500 text-xs uppercase tracking-wider mb-3">Technologies
+                                    Using</span>
+                                <div class="flex flex-wrap gap-2" id="modal-tags"></div>
+                            </div>
+                            <a id="modal-link" href="#" target="_blank"
+                                class="flex items-center justify-center w-full px-8 py-4 text-base font-bold text-white bg-gradient-to-r from-primary-600 to-secondary-600 rounded-xl hover:shadow-lg hover:shadow-primary-500/30 transition-all duration-300 hover:scale-[1.02] cursor-pointer">
+                                View Live Project <i class="ri-external-link-line ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

@@ -13,10 +13,9 @@
   <meta name="geo.placename" content="Cairo">
 
   <!-- Favicon -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./Favicon_files/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./Favicon_files/favicon-16x16.png">
-  <link rel="icon" type="image/x-icon" href="./Favicon_files/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon/favicon.ico">
 
   <meta name="theme-color" content="#2563eb">
 
@@ -31,6 +30,56 @@
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#ecfeff',
+              100: '#cffafe',
+              200: '#a5f3fc',
+              300: '#67e8f9',
+              400: '#22d3ee',
+              500: '#06b6d4',
+              600: '#0891b2',
+              700: '#0e7490',
+              800: '#155e75',
+              900: '#164e63',
+              950: '#083344',
+            },
+            secondary: {
+              50: '#faf5ff',
+              100: '#f3e8ff',
+              200: '#e9d5ff',
+              300: '#d8b4fe',
+              400: '#c084fc',
+              500: '#a855f7',
+              600: '#9333ea',
+              700: '#7e22ce',
+              800: '#6b21a8',
+              900: '#581c87',
+              950: '#3b0764',
+            },
+            accent: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+              950: '#052e16',
+              77: '#052e16',
+            }
+          }
+        }
+      }
+    }
+  </script>
 
   <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -38,38 +87,88 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-  <link href="./Abdallah_files/css/css2.css" rel="stylesheet">
-  <link href="./Abdallah_files/css/custom.css" rel="stylesheet">
+  <link href="./assets/css/css2.css" rel="stylesheet">
+  <link href="./assets/css/custom.css" rel="stylesheet">
 
   <!-- Remix Icon -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
 
   <!-- Custom JS -->
-  <script src="./Abdallah_files/js/fix_interactivity.js" defer></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
   <div id="root">
     <div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-      <section class="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-20">
+
+      <!-- Navigation -->
+      <nav class="fixed top-0 left-0 w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-20">
+            <div class="flex-shrink-0">
+              <a href="index.html" class="text-2xl font-bold text-white tracking-wider">Abdallah<span
+                  class="text-primary-500">.</span></a>
+            </div>
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-8">
+                <a href="index.html"
+                  class="text-white px-3 py-2 rounded-md text-sm font-medium transition-colors uppercase tracking-wide bg-white/10">Home</a>
+                <a href="about.html"
+                  class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors uppercase tracking-wide">About</a>
+                <a href="services.html"
+                  class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors uppercase tracking-wide">Services</a>
+                <a href="portfolio.html"
+                  class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors uppercase tracking-wide">Portfolio</a>
+                <a href="contact.html"
+                  class="px-6 py-2.5 bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-500 hover:to-secondary-500 text-white rounded-xl text-sm font-bold transition-all shadow-lg shadow-primary-500/20 hover:shadow-primary-500/40">Contact</a>
+              </div>
+            </div>
+            <div class="-mr-2 flex md:hidden">
+              <button type="button"
+                class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+                aria-controls="mobile-menu" aria-expanded="false"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <span class="sr-only">Open main menu</span>
+                <i class="ri-menu-3-line text-2xl"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="hidden md:hidden bg-gray-900 border-b border-white/10" id="mobile-menu">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="index.html"
+              class="bg-primary-500/20 text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="about.html"
+              class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+            <a href="services.html"
+              class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
+            <a href="portfolio.html"
+              class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+            <a href="contact.html"
+              class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+      <section class="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-20 pt-32">
         <div class="absolute inset-0 overflow-hidden">
-          <div class="absolute w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl top-20 -left-20 animate-pulse"></div>
+          <div class="absolute w-96 h-96 bg-primary-500/10 rounded-full blur-3xl top-20 -left-20 animate-pulse"></div>
           <div
-            class="absolute w-96 h-96 bg-purple-500/10 rounded-full blur-3xl bottom-20 -right-20 animate-pulse delay-1000">
+            class="absolute w-96 h-96 bg-secondary-500/10 rounded-full blur-3xl bottom-20 -right-20 animate-pulse delay-1000">
           </div>
         </div>
         <div class="relative z-10 max-w-6xl mx-auto text-center transition-all duration-1000 opacity-100 translate-y-0">
           <div class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-12 md:p-16 shadow-2xl">
             <div class="mb-6" data-aos="fade-down">
-              <h2 class="text-cyan-400 text-lg md:text-xl font-medium mb-2 tracking-wide">Welcome to my portfolio</h2>
+              <h2 class="text-primary-400 text-lg md:text-xl font-medium mb-2 tracking-wide">Welcome to my portfolio
+              </h2>
               <h1
-                class="text-5xl md:text-7xl font-bold text-white mb-4 animate-gradient-text bg-clip-text text-transparent bg-gradient-to-r from-white via-cyan-200 to-white">
+                class="text-5xl md:text-7xl font-bold text-white mb-4 animate-gradient-text bg-clip-text text-transparent bg-gradient-to-r from-white via-primary-200 to-white">
                 Abdallah Ahmed Samir</h1>
             </div>
             <div class="mb-8" data-aos="fade-up" data-aos-delay="200">
               <h3
-                class="text-2xl md:text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-green-400 mb-4">
+                class="text-2xl md:text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 mb-4">
                 Graphic Designer &amp; Front-End Learner</h3>
               <p class="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">Blending creativity with
                 professionalism to deliver stunning visual designs and modern web experiences. Based in Cairo, Egypt.
@@ -77,860 +176,55 @@
             </div>
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" data-aos="fade-up"
               data-aos-delay="400">
-              <a href="#portfolio"
-                onclick="event.preventDefault();document.getElementById('portfolio').scrollIntoView({behavior:'smooth'});"
-                class="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/50 whitespace-nowrap w-full sm:w-auto flex items-center justify-center cursor-pointer btn-glow">
+              <a href="portfolio.html"
+                class="group relative px-8 py-4 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary-500/50 whitespace-nowrap w-full sm:w-auto flex items-center justify-center cursor-pointer btn-glow">
                 <span class="relative z-10 flex items-center gap-2">
                   View My Work
                   <i class="ri-arrow-right-line text-xl"></i>
                 </span>
               </a>
-              <button
-                class="group px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border-2 border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-cyan-400 hover:scale-105 whitespace-nowrap w-full sm:w-auto flex items-center justify-center cursor-pointer btn-glow">
+              <a href="contact.html"
+                class="group px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border-2 border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-primary-400 hover:scale-105 whitespace-nowrap w-full sm:w-auto flex items-center justify-center cursor-pointer btn-glow">
                 <span class="flex items-center gap-2">
                   Hire Me
                   <i class="ri-mail-line text-xl"></i>
                 </span>
-              </button>
+              </a>
             </div>
             <div class="mt-12 flex justify-center gap-6">
               <a href="https://linkedin.com/in/abdallaahsam" target="_blank" rel="noopener noreferrer"
-                class="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-cyan-500 hover:border-cyan-500 transition-all duration-300 hover:scale-110 cursor-pointer">
+                class="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-primary-500 hover:border-primary-500 transition-all duration-300 hover:scale-110 cursor-pointer">
                 <i class="ri-linkedin-fill text-xl"></i>
               </a>
-              <a href="#contact"
-                class="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-purple-500 hover:border-purple-500 transition-all duration-300 hover:scale-110 cursor-pointer">
+              <a href="contact.html"
+                class="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-secondary-500 hover:border-secondary-500 transition-all duration-300 hover:scale-110 cursor-pointer">
                 <i class="ri-mail-fill text-xl"></i>
               </a>
             </div>
           </div>
-          <div class="mt-16 animate-bounce"><i class="ri-arrow-down-line text-3xl text-cyan-400"></i></div>
+          <div class="mt-16 animate-bounce"><i class="ri-arrow-down-line text-3xl text-primary-400"></i></div>
         </div>
       </section>
-      <section id="about" class="py-24 px-4 relative">
-        <div class="max-w-7xl mx-auto">
-          <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">About Me</h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-green-500 mx-auto rounded-full"></div>
-          </div>
-          <div class="grid md:grid-cols-2 gap-8 mb-16">
-            <div
-              class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover-card"
-              data-aos="fade-right">
-              <div class="flex items-center gap-4 mb-6">
-                <div
-                  class="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-cyan-500 to-purple-500 rounded-xl">
-                  <i class="ri-user-line text-3xl text-white"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-white">Who I Am</h3>
-              </div>
-              <p class="text-gray-300 leading-relaxed mb-4">I'm Abdallah Ahmed Samir, a passionate
-                creative professional from Cairo, Egypt. Currently pursuing my degree at Faculty of Commerce – Ain Shams
-                University while specializing in Graphic Design, Front-End Development, and Accounting.</p>
-              <p class="text-gray-300 leading-relaxed">I believe in the power of visual storytelling and clean code to
-                create meaningful digital experiences. My journey combines academic excellence with hands-on creative
-                work and community engagement.</p>
-            </div>
-            <div
-              class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover-card"
-              data-aos="fade-left">
-              <div class="flex items-center gap-4 mb-6">
-                <div
-                  class="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-purple-500 to-green-500 rounded-xl">
-                  <i class="ri-map-pin-line text-3xl text-white"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-white">Location &amp; Info</h3>
-              </div>
-              <div class="space-y-4">
-                <div class="flex items-start gap-3"><i class="ri-map-pin-2-fill text-cyan-400 text-xl mt-1"></i>
-                  <div>
-                    <p class="text-white font-semibold">Based in</p>
-                    <p class="text-gray-300">Cairo, Egypt</p>
-                  </div>
-                </div>
-                <div class="flex items-start gap-3"><i class="ri-graduation-cap-fill text-purple-400 text-xl mt-1"></i>
-                  <div>
-                    <p class="text-white font-semibold">Education</p>
-                    <p class="text-gray-300">Commerce Student at Ain Shams University</p>
-                  </div>
-                </div>
-                <div class="flex items-start gap-3"><i class="ri-briefcase-fill text-green-400 text-xl mt-1"></i>
-                  <div>
-                    <p class="text-white font-semibold">Specialization</p>
-                    <p class="text-gray-300">Graphic Design, Front-End Dev, Accounting</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mb-16">
-            <h3 class="text-3xl font-bold text-white text-center mb-8">Skills &amp; Expertise</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div
-                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20 group cursor-pointer hover-card"
-                data-aos="zoom-in" data-aos-delay="0">
-                <div
-                  class="w-12 h-12 flex items-center justify-center bg-cyan-500/20 rounded-lg mb-4 group-hover:bg-cyan-500/30 transition-all duration-300">
-                  <i class="ri-image-edit-line text-2xl text-cyan-400"></i>
-                </div>
-                <p class="text-white font-semibold">Photoshop</p>
-              </div>
-              <div
-                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20 group cursor-pointer hover-card"
-                data-aos="zoom-in" data-aos-delay="100">
-                <div
-                  class="w-12 h-12 flex items-center justify-center bg-purple-500/20 rounded-lg mb-4 group-hover:bg-purple-500/30 transition-all duration-300">
-                  <i class="ri-code-s-slash-line text-2xl text-purple-400"></i>
-                </div>
-                <p class="text-white font-semibold">HTML &amp; CSS</p>
-              </div>
-              <div
-                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20 group cursor-pointer hover-card"
-                data-aos="zoom-in" data-aos-delay="200">
-                <div
-                  class="w-12 h-12 flex items-center justify-center bg-green-500/20 rounded-lg mb-4 group-hover:bg-green-500/30 transition-all duration-300">
-                  <i class="ri-file-word-line text-2xl text-green-400"></i>
-                </div>
-                <p class="text-white font-semibold">Microsoft Office</p>
-              </div>
-              <div
-                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20 group cursor-pointer hover-card"
-                data-aos="zoom-in" data-aos-delay="300">
-                <div
-                  class="w-12 h-12 flex items-center justify-center bg-cyan-500/20 rounded-lg mb-4 group-hover:bg-cyan-500/30 transition-all duration-300">
-                  <i class="ri-team-line text-2xl text-cyan-400"></i>
-                </div>
-                <p class="text-white font-semibold">Teamwork</p>
-              </div>
-              <div
-                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20 group cursor-pointer hover-card"
-                data-aos="zoom-in" data-aos-delay="400">
-                <div
-                  class="w-12 h-12 flex items-center justify-center bg-purple-500/20 rounded-lg mb-4 group-hover:bg-purple-500/30 transition-all duration-300">
-                  <i class="ri-chat-3-line text-2xl text-purple-400"></i>
-                </div>
-                <p class="text-white font-semibold">Communication</p>
-              </div>
-              <div
-                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20 group cursor-pointer hover-card"
-                data-aos="zoom-in" data-aos-delay="500">
-                <div
-                  class="w-12 h-12 flex items-center justify-center bg-green-500/20 rounded-lg mb-4 group-hover:bg-green-500/30 transition-all duration-300">
-                  <i class="ri-lightbulb-line text-2xl text-green-400"></i>
-                </div>
-                <p class="text-white font-semibold">Problem-Solving</p>
-              </div>
-              <div
-                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20 group cursor-pointer hover-card"
-                data-aos="zoom-in" data-aos-delay="600">
-                <div
-                  class="w-12 h-12 flex items-center justify-center bg-cyan-500/20 rounded-lg mb-4 group-hover:bg-cyan-500/30 transition-all duration-300">
-                  <i class="ri-search-line text-2xl text-cyan-400"></i>
-                </div>
-                <p class="text-white font-semibold">Research</p>
-              </div>
-              <div
-                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/20 group cursor-pointer hover-card"
-                data-aos="zoom-in" data-aos-delay="700">
-                <div
-                  class="w-12 h-12 flex items-center justify-center bg-purple-500/20 rounded-lg mb-4 group-hover:bg-purple-500/30 transition-all duration-300">
-                  <i class="ri-refresh-line text-2xl text-purple-400"></i>
-                </div>
-                <p class="text-white font-semibold">Adaptability</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <h3 class="text-3xl font-bold text-white text-center mb-8">Experience &amp; Background</h3>
-            <div class="grid md:grid-cols-2 gap-6">
-              <div
-                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                <h4 class="text-xl font-bold text-cyan-400 mb-4 flex items-center gap-2"><i
-                    class="ri-checkbox-circle-fill"></i>Education</h4>
-                <ul class="space-y-2">
-                  <li class="text-gray-300 flex items-start gap-2"><i
-                      class="ri-arrow-right-s-line text-purple-400 mt-1"></i><span>Faculty of Commerce – Ain Shams
-                      University (Arabic section)</span></li>
-                  <li class="text-gray-300 flex items-start gap-2"><i
-                      class="ri-arrow-right-s-line text-purple-400 mt-1"></i><span>2023–2028</span></li>
-                </ul>
-              </div>
-              <div
-                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                <h4 class="text-xl font-bold text-cyan-400 mb-4 flex items-center gap-2"><i
-                    class="ri-checkbox-circle-fill"></i>Training &amp; Courses</h4>
-                <ul class="space-y-2">
-                  <li class="text-gray-300 flex items-start gap-2"><i
-                      class="ri-arrow-right-s-line text-purple-400 mt-1"></i><span>Graphic Design Course at First Step
-                      (Jan–May 2023)</span></li>
-                </ul>
-              </div>
-              <div
-                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                <h4 class="text-xl font-bold text-cyan-400 mb-4 flex items-center gap-2"><i
-                    class="ri-checkbox-circle-fill"></i>Organizations</h4>
-                <ul class="space-y-2">
-                  <li class="text-gray-300 flex items-start gap-2"><i
-                      class="ri-arrow-right-s-line text-purple-400 mt-1"></i><span>AIBE – Marketing Team</span></li>
-                  <li class="text-gray-300 flex items-start gap-2"><i
-                      class="ri-arrow-right-s-line text-purple-400 mt-1"></i><span>Project X – Entrepreneurship</span>
-                  </li>
-                  <li class="text-gray-300 flex items-start gap-2"><i
-                      class="ri-arrow-right-s-line text-purple-400 mt-1"></i><span>YLY Cairo – Social Media
-                      Committee</span></li>
-                </ul>
-              </div>
-              <div
-                class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                <h4 class="text-xl font-bold text-cyan-400 mb-4 flex items-center gap-2"><i
-                    class="ri-checkbox-circle-fill"></i>Volunteer Work</h4>
-                <ul class="space-y-2">
-                  <li class="text-gray-300 flex items-start gap-2"><i
-                      class="ri-arrow-right-s-line text-purple-400 mt-1"></i><span>Life Makers Foundation (Social Media
-                      Committee)</span></li>
-                  <li class="text-gray-300 flex items-start gap-2"><i
-                      class="ri-arrow-right-s-line text-purple-400 mt-1"></i><span>Resala Foundation – Maadi branch (6
-                      months training)</span></li>
-                  <li class="text-gray-300 flex items-start gap-2"><i
-                      class="ri-arrow-right-s-line text-purple-400 mt-1"></i><span>Hayah Karima initiative – Dar Al
-                      Salam</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="portfolio" class="py-24 px-4 relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-        <div class="max-w-7xl mx-auto">
-          <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">My Portfolio</h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-green-500 mx-auto rounded-full mb-6">
-            </div>
-            <p class="text-gray-300 text-lg max-w-2xl mx-auto">Explore my creative work spanning graphic design and
-              front-end development projects</p>
-          </div>
-          <div class="flex flex-wrap justify-center gap-3 mb-12" id="portfolio-filters">
-            <button data-filter="all"
-              class="portfolio-filter px-6 py-3 rounded-full font-medium transition-all duration-300 whitespace-nowrap cursor-pointer bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/30">
-              All Projects
-            </button>
-            <button data-filter="graphic-design"
-              class="portfolio-filter px-6 py-3 rounded-full font-medium transition-all duration-300 whitespace-nowrap cursor-pointer bg-white/10 backdrop-blur-sm text-gray-300 hover:bg-white/20 border border-white/10">
-              Graphic Design
-            </button>
-            <button data-filter="front-end"
-              class="portfolio-filter px-6 py-3 rounded-full font-medium transition-all duration-300 whitespace-nowrap cursor-pointer bg-white/10 backdrop-blur-sm text-gray-300 hover:bg-white/20 border border-white/10">
-              Front-End
-            </button>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <div data-category="graphic-design"
-              class="portfolio-item group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 cursor-pointer">
-              <div class="relative h-56 md:h-64 overflow-hidden"><img alt="Brand Identity Design"
-                  class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
-                  src="./Abdallah_files/006469b0a3c5b41fb8206d7dcbf4cce1.jpg">
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300">
-                </div>
-                <div
-                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button
-                    class="px-6 py-3 bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300 whitespace-nowrap cursor-pointer">View
-                    Details</button>
-                </div>
-              </div>
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                  Brand Identity Design</h3>
-                <p class="text-gray-400 text-sm mb-4 line-clamp-2">Complete brand identity package including logo, color
-                  palette, and brand guidelines for a modern tech startup.</p>
-                <div class="flex flex-wrap gap-2"><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Branding</span><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Logo
-                    Design</span><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Identity</span>
-                </div>
-              </div>
-            </div>
-            <div data-category="graphic-design"
-              class="portfolio-item group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 cursor-pointer">
-              <div class="relative h-56 md:h-64 overflow-hidden"><img alt="Social Media Campaign"
-                  class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
-                  src="./Abdallah_files/search-image.jpg">
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300">
-                </div>
-                <div
-                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button
-                    class="px-6 py-3 bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300 whitespace-nowrap cursor-pointer">View
-                    Details</button>
-                </div>
-              </div>
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                  Social Media Campaign</h3>
-                <p class="text-gray-400 text-sm mb-4 line-clamp-2">Eye-catching social media graphics for Instagram and
-                  Facebook marketing campaign with consistent visual theme.</p>
-                <div class="flex flex-wrap gap-2"><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Social
-                    Media</span><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Marketing</span><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Graphics</span>
-                </div>
-              </div>
-            </div>
-            <div data-category="graphic-design"
-              class="portfolio-item group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 cursor-pointer">
-              <div class="relative h-56 md:h-64 overflow-hidden"><img alt="Corporate Presentation"
-                  class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
-                  src="./Abdallah_files/search-image(1).jpg">
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300">
-                </div>
-                <div
-                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button
-                    class="px-6 py-3 bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300 whitespace-nowrap cursor-pointer">View
-                    Details</button>
-                </div>
-              </div>
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                  Corporate Presentation</h3>
-                <p class="text-gray-400 text-sm mb-4 line-clamp-2">Professional PowerPoint presentation design with
-                  modern layouts, infographics, and data visualization.</p>
-                <div class="flex flex-wrap gap-2"><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Presentation</span><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Corporate</span><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Infographics</span>
-                </div>
-              </div>
-            </div>
-            <div data-category="front-end"
-              class="portfolio-item group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 cursor-pointer">
-              <div class="relative h-56 md:h-64 overflow-hidden"><img alt="Restaurant Landing Page"
-                  class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
-                  src="./Abdallah_files/search-image(2).jpg">
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300">
-                </div>
-                <div
-                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button
-                    class="px-6 py-3 bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300 whitespace-nowrap cursor-pointer">View
-                    Details</button>
-                </div>
-              </div>
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                  Restaurant Landing Page</h3>
-                <p class="text-gray-400 text-sm mb-4 line-clamp-2">Responsive landing page for a restaurant with menu
-                  showcase, reservation system, and elegant animations.</p>
-                <div class="flex flex-wrap gap-2"><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">HTML</span><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">CSS</span><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Responsive</span>
-                </div>
-              </div>
-            </div>
-            <div data-category="front-end"
-              class="portfolio-item group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 cursor-pointer"
-              data-aos="fade-up" data-aos-delay="100">
-              <div class="relative h-56 md:h-64 overflow-hidden"><img alt="Portfolio Website"
-                  class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
-                  src="./Abdallah_files/search-image(3).jpg">
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300">
-                </div>
-                <div
-                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button
-                    class="px-6 py-3 bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300 whitespace-nowrap cursor-pointer">View
-                    Details</button>
-                </div>
-              </div>
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                  Portfolio Website</h3>
-                <p class="text-gray-400 text-sm mb-4 line-clamp-2">Personal portfolio website with smooth animations,
-                  dark mode, and interactive project gallery.</p>
-                <div class="flex flex-wrap gap-2"><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Portfolio</span><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Animation</span><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Dark
-                    Mode</span></div>
-              </div>
-            </div>
-            <div data-category="front-end"
-              class="portfolio-item group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 cursor-pointer"
-              data-aos="fade-up" data-aos-delay="200">
-              <div class="relative h-56 md:h-64 overflow-hidden"><img alt="E-commerce Product Page"
-                  class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
-                  src="./Abdallah_files/search-image(4).jpg">
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300">
-                </div>
-                <div
-                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button
-                    class="px-6 py-3 bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300 whitespace-nowrap cursor-pointer">View
-                    Details</button>
-                </div>
-              </div>
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                  E-commerce Product Page</h3>
-                <p class="text-gray-400 text-sm mb-4 line-clamp-2">Product detail page with image gallery, size
-                  selector, and add to cart functionality.</p>
-                <div class="flex flex-wrap gap-2"><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">E-commerce</span><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">UI/UX</span><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Interactive</span>
-                </div>
-              </div>
-            </div>
-            <div data-category="graphic-design"
-              class="portfolio-item group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 cursor-pointer"
-              data-aos="fade-up" data-aos-delay="300">
-              <div class="relative h-56 md:h-64 overflow-hidden"><img alt="Event Poster Design"
-                  class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
-                  src="./Abdallah_files/search-image(5).jpg">
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300">
-                </div>
-                <div
-                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button
-                    class="px-6 py-3 bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300 whitespace-nowrap cursor-pointer">View
-                    Details</button>
-                </div>
-              </div>
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                  Event Poster Design</h3>
-                <p class="text-gray-400 text-sm mb-4 line-clamp-2">Creative poster design for university event with bold
-                  typography and vibrant color scheme.</p>
-                <div class="flex flex-wrap gap-2"><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Poster</span><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Event</span><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Typography</span>
-                </div>
-              </div>
-            </div>
-            <div data-category="front-end"
-              class="portfolio-item group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 cursor-pointer"
-              data-aos="fade-up" data-aos-delay="400">
-              <div class="relative h-56 md:h-64 overflow-hidden"><img alt="Business Dashboard"
-                  class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
-                  src="./Abdallah_files/search-image(6).jpg">
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300">
-                </div>
-                <div
-                  class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button
-                    class="px-6 py-3 bg-white/20 backdrop-blur-md text-white font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-all duration-300 whitespace-nowrap cursor-pointer">View
-                    Details</button>
-                </div>
-              </div>
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                  Business Dashboard</h3>
-                <p class="text-gray-400 text-sm mb-4 line-clamp-2">Admin dashboard interface with charts, data tables,
-                  and responsive sidebar navigation.</p>
-                <div class="flex flex-wrap gap-2"><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Dashboard</span><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Data
-                    Viz</span><span
-                    class="px-3 py-1 text-xs font-medium bg-white/10 text-cyan-400 rounded-full border border-cyan-500/30">Admin</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="services" class="py-24 px-4 relative">
-        <div class="max-w-7xl mx-auto">
-          <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">What I Offer</h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-green-500 mx-auto rounded-full mb-6">
-            </div>
-            <p class="text-gray-300 text-lg max-w-2xl mx-auto">Professional design and development services tailored to
-              your business needs</p>
-          </div>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div
-              class="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 hover-card"
-              data-aos="fade-up" data-aos-delay="0">
-              <div
-                class="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-cyan-500/20 to-cyan-500/10 border border-cyan-500/30 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                <i class="ri-instagram-line text-3xl text-cyan-400"></i>
-              </div>
-              <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                Social Media Designs</h3>
-              <p class="text-gray-300 leading-relaxed mb-6">Eye-catching posts, stories, and cover designs for
-                Instagram, Facebook, and LinkedIn that boost engagement and brand visibility.</p>
-              <div class="space-y-2">
-                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-cyan-400"></i><span
-                    class="text-gray-300 text-sm">Post Designs</span></div>
-                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-cyan-400"></i><span
-                    class="text-gray-300 text-sm">Story Templates</span></div>
-                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-cyan-400"></i><span
-                    class="text-gray-300 text-sm">Cover Images</span></div>
-                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-cyan-400"></i><span
-                    class="text-gray-300 text-sm">Ad Creatives</span></div>
-              </div>
-              <div class="mt-6 pt-6 border-t border-white/10"><a href="#contact"
-                  class="text-cyan-400 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all duration-300 cursor-pointer"><span>Get
-                    Started</span><i class="ri-arrow-right-line"></i></a></div>
-            </div>
-            <div
-              class="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 hover-card"
-              data-aos="fade-up" data-aos-delay="100">
-              <div
-                class="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-purple-500/20 to-purple-500/10 border border-purple-500/30 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                <i class="ri-palette-line text-3xl text-purple-400"></i>
-              </div>
-              <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                Branding Basics</h3>
-              <p class="text-gray-300 leading-relaxed mb-6">Professional logo design, color palettes, and brand identity
-                elements that make your business stand out.</p>
-              <div class="space-y-2">
-                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-purple-400"></i><span
-                    class="text-gray-300 text-sm">Logo Design</span></div>
-                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-purple-400"></i><span
-                    class="text-gray-300 text-sm">Color Schemes</span></div>
-                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-purple-400"></i><span
-                    class="text-gray-300 text-sm">Brand Guidelines</span></div>
-                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-purple-400"></i><span
-                    class="text-gray-300 text-sm">Business Cards</span></div>
-              </div>
-              <div class="mt-6 pt-6 border-t border-white/10"><a href="#contact"
-                  class="text-cyan-400 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all duration-300 cursor-pointer"><span>Get
-                    Started</span><i class="ri-arrow-right-line"></i></a></div>
-            </div>
 
-            <div
-              class="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 hover-card"
-              data-aos="fade-up" data-aos-delay="300">
-              <div
-                class="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-cyan-500/20 to-cyan-500/10 border border-cyan-500/30 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                <i class="ri-code-s-slash-line text-3xl text-cyan-400"></i>
-              </div>
-              <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                Front-End Landing Pages</h3>
-              <p class="text-gray-300 leading-relaxed mb-6">Responsive, pixel-perfect landing pages built with HTML and
-                CSS that convert visitors into customers.</p>
-              <div class="space-y-2">
-                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-cyan-400"></i><span
-                    class="text-gray-300 text-sm">Responsive Design</span></div>
-                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-cyan-400"></i><span
-                    class="text-gray-300 text-sm">Clean Code</span></div>
-                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-cyan-400"></i><span
-                    class="text-gray-300 text-sm">Fast Loading</span></div>
-                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-cyan-400"></i><span
-                    class="text-gray-300 text-sm">Cross-Browser</span></div>
-              </div>
-              <div class="mt-6 pt-6 border-t border-white/10"><a href="#contact"
-                  class="text-cyan-400 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all duration-300 cursor-pointer"><span>Get
-                    Started</span><i class="ri-arrow-right-line"></i></a></div>
-            </div>
-            <div
-              class="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 hover-card"
-              data-aos="fade-up" data-aos-delay="400">
-              <div
-                class="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-purple-500/20 to-purple-500/10 border border-purple-500/30 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                <i class="ri-presentation-line text-3xl text-purple-400"></i>
-              </div>
-              <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                Corporate Presentations</h3>
-              <p class="text-gray-300 leading-relaxed mb-6">Professional PowerPoint and presentation designs with
-                compelling visuals and clear data visualization.</p>
-              <div class="space-y-2">
-                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-purple-400"></i><span
-                    class="text-gray-300 text-sm">Slide Design</span></div>
-                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-purple-400"></i><span
-                    class="text-gray-300 text-sm">Infographics</span></div>
-                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-purple-400"></i><span
-                    class="text-gray-300 text-sm">Charts &amp; Graphs</span></div>
-                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-purple-400"></i><span
-                    class="text-gray-300 text-sm">Templates</span></div>
-              </div>
-              <div class="mt-6 pt-6 border-t border-white/10"><a href="#contact"
-                  class="text-cyan-400 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all duration-300 cursor-pointer"><span>Get
-                    Started</span><i class="ri-arrow-right-line"></i></a></div>
-            </div>
-            <div
-              class="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 hover-card"
-              data-aos="fade-up" data-aos-delay="500">
-              <div
-                class="w-16 h-16 flex items-center justify-center bg-gradient-to-br from-green-500/20 to-green-500/10 border border-green-500/30 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                <i class="ri-pencil-ruler-2-line text-3xl text-green-400"></i>
-              </div>
-              <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                Custom Graphics</h3>
-              <p class="text-gray-300 leading-relaxed mb-6">Tailored graphic design solutions for any project including
-                posters, flyers, banners, and digital assets.</p>
-              <div class="space-y-2">
-                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-green-400"></i><span
-                    class="text-gray-300 text-sm">Posters</span></div>
-                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-green-400"></i><span
-                    class="text-gray-300 text-sm">Flyers</span></div>
-                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-green-400"></i><span
-                    class="text-gray-300 text-sm">Banners</span></div>
-                <div class="flex items-center gap-2"><i class="ri-checkbox-circle-fill text-green-400"></i><span
-                    class="text-gray-300 text-sm">Digital Assets</span></div>
-              </div>
-              <div class="mt-6 pt-6 border-t border-white/10"><a href="#contact"
-                  class="text-cyan-400 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all duration-300 cursor-pointer"><span>Get
-                    Started</span><i class="ri-arrow-right-line"></i></a></div>
-            </div>
-          </div>
-          <div
-            class="mt-16 backdrop-blur-xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-green-500/10 border border-white/10 rounded-2xl p-12 text-center">
-            <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Start Your Project?</h3>
-            <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">Let's collaborate to bring your vision to life with
-              professional design and development services</p><a href="#contact"
-              class="inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50 whitespace-nowrap cursor-pointer">Contact
-              Me Now</a>
-          </div>
-        </div>
-      </section>
       <section id="testimonials"
         class="py-24 px-4 relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         <div class="max-w-7xl mx-auto">
           <div class="text-center mb-16">
             <h2 class="text-4xl md:text-5xl font-bold text-white mb-4" data-aos="fade-up">Client Testimonials</h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-green-500 mx-auto rounded-full mb-6">
+            <div
+              class="w-24 h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 mx-auto rounded-full mb-6">
             </div>
             <p class="text-gray-300 text-lg max-w-2xl mx-auto">What clients say about working with me</p>
           </div>
 
           <div class="swiper testimonialSwiper pb-12">
-            <div class="swiper-wrapper">
-              <!-- Testimonial 1 -->
-              <div class="swiper-slide h-auto">
-                <div
-                  class="h-full backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-xl hover:border-cyan-500/30 group">
-                  <div class="mb-4"><i
-                      class="ri-double-quotes-l text-4xl text-cyan-500/50 group-hover:text-cyan-400 transition-colors"></i>
-                  </div>
-                  <p class="text-gray-300 leading-relaxed mb-6">"Abdullah is a quick and easy person who can handle
-                    anything and is proficient in multiple skills, and I was happy to work with him."</p>
-                  <div class="flex items-center gap-4 pt-4 border-t border-white/10">
-                    <img src="./Abdallah_files/Mohamed farmawy.jpg" alt="Mohamed farmawy"
-                      class="w-12 h-12 rounded-full object-cover border-2 border-cyan-500/50">
-                    <div>
-                      <h4 class="text-white font-bold text-sm">Mohamed farmawy</h4>
-                      <p class="text-cyan-400 text-xs">Graphic Designer</p>
-                      <p class="text-gray-500 text-xs">Ottroja CO</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Testimonial 2 -->
-              <div class="swiper-slide h-auto">
-                <div
-                  class="h-full backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-xl hover:border-purple-500/30 group">
-                  <div class="mb-4"><i
-                      class="ri-double-quotes-l text-4xl text-purple-500/50 group-hover:text-purple-400 transition-colors"></i>
-                  </div>
-                  <p class="text-gray-300 leading-relaxed mb-6">"The brand identity package was exactly what we needed.
-                    Abdallah understood our vision and brought it to life beautifully."</p>
-                  <div class="flex items-center gap-4 pt-4 border-t border-white/10">
-                    <img src="./Abdallah_files/search-image(7).jpg" alt="Sara Mohamed"
-                      class="w-12 h-12 rounded-full object-cover border-2 border-purple-500/50">
-                    <div>
-                      <h4 class="text-white font-bold text-sm">Sara Mohamed</h4>
-                      <p class="text-purple-400 text-xs">Startup Founder</p>
-                      <p class="text-gray-500 text-xs">GreenTech Innovations</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Testimonial 3 -->
-              <div class="swiper-slide h-auto">
-                <div
-                  class="h-full backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-xl hover:border-green-500/30 group">
-                  <div class="mb-4"><i
-                      class="ri-double-quotes-l text-4xl text-green-500/50 group-hover:text-green-400 transition-colors"></i>
-                  </div>
-                  <p class="text-gray-300 leading-relaxed mb-6">"Our new website looks amazing and works perfectly on
-                    all
-                    devices. Great attention to detail and quick turnaround time."</p>
-                  <div class="flex items-center gap-4 pt-4 border-t border-white/10">
-                    <img src="./Abdallah_files/search-image(8).jpg" alt="Omar Khalil"
-                      class="w-12 h-12 rounded-full object-cover border-2 border-green-500/50">
-                    <div>
-                      <h4 class="text-white font-bold text-sm">Omar Khalil</h4>
-                      <p class="text-green-400 text-xs">Restaurant Owner</p>
-                      <p class="text-gray-500 text-xs">Cairo Bites</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Testimonial 4 -->
-              <div class="swiper-slide h-auto">
-                <div
-                  class="h-full backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-xl hover:border-cyan-500/30 group">
-                  <div class="mb-4"><i
-                      class="ri-double-quotes-l text-4xl text-cyan-500/50 group-hover:text-cyan-400 transition-colors"></i>
-                  </div>
-                  <p class="text-gray-300 leading-relaxed mb-6">"The event posters and promotional materials were
-                    stunning.
-                    Abdallah has a great eye for design and understands client needs."</p>
-                  <div class="flex items-center gap-4 pt-4 border-t border-white/10">
-                    <img src="./Abdallah_files/search-image(9).jpg" alt="Layla Ibrahim"
-                      class="w-12 h-12 rounded-full object-cover border-2 border-cyan-500/50">
-                    <div>
-                      <h4 class="text-white font-bold text-sm">Layla Ibrahim</h4>
-                      <p class="text-cyan-400 text-xs">Event Coordinator</p>
-                      <p class="text-gray-500 text-xs">Elite Events</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Testimonial 5 -->
-              <div class="swiper-slide h-auto">
-                <div
-                  class="h-full backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-xl hover:border-purple-500/30 group">
-                  <div class="mb-4"><i
-                      class="ri-double-quotes-l text-4xl text-purple-500/50 group-hover:text-purple-400 transition-colors"></i>
-                  </div>
-                  <p class="text-gray-300 leading-relaxed mb-6">"Working with Abdallah was a pleasure. He created
-                    stunning
-                    product visuals that boosted our online sales significantly."</p>
-                  <div class="flex items-center gap-4 pt-4 border-t border-white/10">
-                    <img src="./Abdallah_files/search-image(10).jpg" alt="Youssef Ali"
-                      class="w-12 h-12 rounded-full object-cover border-2 border-purple-500/50">
-                    <div>
-                      <h4 class="text-white font-bold text-sm">Youssef Ali</h4>
-                      <p class="text-purple-400 text-xs">E-commerce Manager</p>
-                      <p class="text-gray-500 text-xs">Digital Market Hub</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Testimonial 6 -->
-              <div class="swiper-slide h-auto">
-                <div
-                  class="h-full backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-xl hover:border-green-500/30 group">
-                  <div class="mb-4"><i
-                      class="ri-double-quotes-l text-4xl text-green-500/50 group-hover:text-green-400 transition-colors"></i>
-                  </div>
-                  <p class="text-gray-300 leading-relaxed mb-6">"The social media templates are exactly what I needed.
-                    Professional, modern, and easy to customize. Highly recommended!"</p>
-                  <div class="flex items-center gap-4 pt-4 border-t border-white/10">
-                    <img src="./Abdallah_files/search-image(11).jpg" alt="Nour Mahmoud"
-                      class="w-12 h-12 rounded-full object-cover border-2 border-green-500/50">
-                    <div>
-                      <h4 class="text-white font-bold text-sm">Nour Mahmoud</h4>
-                      <p class="text-green-400 text-xs">Content Creator</p>
-                      <p class="text-gray-500 text-xs">Creative Studio</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div class="swiper-wrapper"></div>
             <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
-      <section id="contact" class="py-24 px-4 relative">
-        <div class="max-w-7xl mx-auto">
-          <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4" data-aos="fade-up">Get In Touch</h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-green-500 mx-auto rounded-full mb-6">
-            </div>
-            <p class="text-gray-300 text-lg max-w-2xl mx-auto">Have a project in mind? Let's discuss how I can help
-              bring your ideas to life</p>
-          </div>
-          <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
-            <div class="space-y-6 lg:space-y-8">
-              <div class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 lg:p-8"
-                data-aos="fade-right">
-                <h3 class="text-xl lg:text-2xl font-bold text-white mb-6">Contact Information</h3>
-                <div class="space-y-6">
-                  <div class="flex items-start gap-4">
-                    <div class="w-12 h-12 flex items-center justify-center bg-cyan-500/20 rounded-xl flex-shrink-0"><i
-                        class="ri-map-pin-line text-2xl text-cyan-400"></i></div>
-                    <div>
-                      <h4 class="text-white font-semibold mb-1">Location</h4>
-                      <p class="text-gray-300 text-sm lg:text-base">Cairo, Egypt</p>
-                    </div>
-                  </div>
-                  <div class="flex items-start gap-4">
-                    <div class="w-12 h-12 flex items-center justify-center bg-purple-500/20 rounded-xl flex-shrink-0"><i
-                        class="ri-mail-line text-2xl text-purple-400"></i></div>
-                    <div>
-                      <h4 class="text-white font-semibold mb-1">Email</h4>
-                      <p class="text-gray-300 text-sm lg:text-base">abdallaahsam@gmail.com</p>
-                    </div>
-                  </div>
-                  <div class="flex items-start gap-4">
-                    <div class="w-12 h-12 flex items-center justify-center bg-green-500/20 rounded-xl flex-shrink-0"><i
-                        class="ri-linkedin-line text-2xl text-green-400"></i></div>
-                    <div class="min-w-0 flex-1">
-                      <h4 class="text-white font-semibold mb-1">LinkedIn</h4><a
-                        href="https://linkedin.com/in/abdallaahsam" target="_blank" rel="noopener noreferrer"
-                        class="text-cyan-400 hover:underline cursor-pointer text-sm lg:text-base break-words">linkedin.com/in/abdallaahsam</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-            </div>
-            <div class="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 lg:p-8" data-aos="fade-left">
-              <h3 class="text-xl lg:text-2xl font-bold text-white mb-6">Connect Directly</h3>
-              <div class="space-y-4">
-                <a href="https://api.whatsapp.com/send/?phone=+201112302757&text=%D8%A7%D8%B2%D9%8A%D9%83%20%D9%8A%D8%A7%20%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%84%D9%87%20%D8%A7%D9%86%D8%A7%20%D8%AC%D8%A7%D9%8A%D9%84%D9%83%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%D9%88%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A7%D8%B9%D8%B1%D9%81%20%D8%A7%D9%83%D8%AA%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%20%F0%9F%98%8E%F0%9F%A4%9E&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300 group cursor-pointer">
-                  <div
-                    class="w-12 h-12 flex items-center justify-center bg-green-500/20 rounded-xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                    <i class="ri-whatsapp-line text-2xl text-green-400"></i>
-                  </div>
-                  <div class="flex-1 min-w-0">
-                    <h4 class="text-white font-semibold">WhatsApp</h4>
-                    <p class="text-gray-300 text-sm">Chat with me directly</p>
-                  </div>
-                  <i class="ri-arrow-right-line text-cyan-400 text-xl flex-shrink-0"></i>
-                </a>
-                <a href="mailto:abdallaahsam@gmail.com"
-                  class="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300 group cursor-pointer">
-                  <div
-                    class="w-12 h-12 flex items-center justify-center bg-purple-500/20 rounded-xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                    <i class="ri-mail-line text-2xl text-purple-400"></i>
-                  </div>
-                  <div class="flex-1 min-w-0">
-                    <h4 class="text-white font-semibold">Email</h4>
-                    <p class="text-gray-300 text-sm">abdallaahsam@gmail.com</p>
-                  </div>
-                  <i class="ri-arrow-right-line text-cyan-400 text-xl flex-shrink-0"></i>
-                </a>
-                <a href="https://linkedin.com/in/abdallaahsam" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300 group cursor-pointer">
-                  <div
-                    class="w-12 h-12 flex items-center justify-center bg-cyan-500/20 rounded-xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                    <i class="ri-linkedin-fill text-2xl text-cyan-400"></i>
-                  </div>
-                  <div class="flex-1 min-w-0">
-                    <h4 class="text-white font-semibold">LinkedIn</h4>
-                    <p class="text-gray-300 text-sm">Connect professionally</p>
-                  </div>
-                  <i class="ri-arrow-right-line text-cyan-400 text-xl flex-shrink-0"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <footer class="py-12 px-4 border-t border-white/10">
+      <footer class="py-12 px-4 border-t border-white/10 bg-gray-900">
         <div class="max-w-7xl mx-auto">
           <div class="grid md:grid-cols-3 gap-8 mb-8" data-aos="fade-up">
             <div>
@@ -940,17 +234,18 @@
             <div>
               <h4 class="text-white font-bold mb-4">Quick Links</h4>
               <ul class="space-y-2">
-                <li><a href="#about"
-                    class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 cursor-pointer">About Me</a>
+                <li><a href="about.html"
+                    class="text-gray-300 hover:text-primary-400 transition-colors duration-300 cursor-pointer">About
+                    Me</a>
                 </li>
-                <li><a href="#portfolio"
-                    class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 cursor-pointer">Portfolio</a>
+                <li><a href="portfolio.html"
+                    class="text-gray-300 hover:text-primary-400 transition-colors duration-300 cursor-pointer">Portfolio</a>
                 </li>
-                <li><a href="#services"
-                    class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 cursor-pointer">Services</a>
+                <li><a href="services.html"
+                    class="text-gray-300 hover:text-primary-400 transition-colors duration-300 cursor-pointer">Services</a>
                 </li>
-                <li><a href="#contact"
-                    class="text-gray-300 hover:text-cyan-400 transition-colors duration-300 cursor-pointer">Contact</a>
+                <li><a href="contact.html"
+                    class="text-gray-300 hover:text-primary-400 transition-colors duration-300 cursor-pointer">Contact</a>
                 </li>
               </ul>
             </div>
@@ -958,15 +253,15 @@
               <h4 class="text-white font-bold mb-4">Connect With Me</h4>
               <div class="flex gap-4">
                 <a href="https://linkedin.com/in/abdallaahsam" target="_blank" rel="noopener noreferrer"
-                  class="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-cyan-500 hover:border-cyan-500 transition-all duration-300 hover:scale-110 cursor-pointer">
+                  class="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-primary-500 hover:border-primary-500 transition-all duration-300 hover:scale-110 cursor-pointer">
                   <i class="ri-linkedin-fill text-xl"></i>
                 </a>
-                <a href="https://api.whatsapp.com/send/?phone=+201112302757&text=%D8%A7%D8%B2%D9%8A%D9%83%20%D9%8A%D8%A7%20%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%84%D9%87%20%D8%A7%D9%86%D8%A7%20%D8%AC%D8%A7%D9%8A%D9%84%D9%83%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9%20%D9%88%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A7%D8%B9%D8%B1%D9%81%20%D8%A7%D9%83%D8%AA%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%20%F0%9F%98%8E%F0%9F%A4%9E&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer"
-                  class="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-green-500 hover:border-green-500 transition-all duration-300 hover:scale-110 cursor-pointer">
+                <a href="https://wa.me/+201112302757" target="_blank" rel="noopener noreferrer"
+                  class="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-accent-500 hover:border-accent-500 transition-all duration-300 hover:scale-110 cursor-pointer">
                   <i class="ri-whatsapp-fill text-xl"></i>
                 </a>
-                <a href="#contact"
-                  class="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-purple-500 hover:border-purple-500 transition-all duration-300 hover:scale-110 cursor-pointer">
+                <a href="contact.html"
+                  class="w-12 h-12 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-secondary-500 hover:border-secondary-500 transition-all duration-300 hover:scale-110 cursor-pointer">
                   <i class="ri-mail-fill text-xl"></i>
                 </a>
               </div>
@@ -980,38 +275,11 @@
     </div>
   </div>
 
-
-
   <!-- AOS Animation JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    var swiper = new Swiper(".testimonialSwiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      grabCursor: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-      },
-    });
-  </script>
+  <script src="./assets/js/data.js"></script>
+  <script src="./assets/js/app.js"></script>
 </body>
 
 </html>
